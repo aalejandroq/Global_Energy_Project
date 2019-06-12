@@ -1,0 +1,152 @@
+ID,country,points,price,province,region_1,taster_name,title,variety,winery
+0,Italy,87,,Sicily & Sardinia,Etna,Kerin O’Keefe,Nicosia 2013 Vulkà Bianco  (Etna),White Blend,Nicosia
+1,Portugal,87,15,Douro,,Roger Voss,Quinta dos Avidagos 2011 Avidagos Red (Douro),Portuguese Red,Quinta dos Avidagos
+2,US,87,14,Oregon,Willamette Valley,Paul Gregutt,Rainstorm 2013 Pinot Gris (Willamette Valley),Pinot Gris,Rainstorm
+3,US,87,13,Michigan,Lake Michigan Shore,Alexander Peartree,St. Julian 2013 Reserve Late Harvest Riesling (Lake Michigan Shore),Riesling,St. Julian
+4,US,87,65,Oregon,Willamette Valley,Paul Gregutt,Sweet Cheeks 2012 Vintner's Reserve Wild Child Block Pinot Noir (Willamette Valley),Pinot Noir,Sweet Cheeks
+5,Spain,87,15,Northern Spain,Navarra,Michael Schachner,Tandem 2011 Ars In Vitro Tempranillo-Merlot (Navarra),Tempranillo-Merlot,Tandem
+6,Italy,87,16,Sicily & Sardinia,Vittoria,Kerin O’Keefe,Terre di Giurfo 2013 Belsito Frappato (Vittoria),Frappato,Terre di Giurfo
+7,France,87,24,Alsace,Alsace,Roger Voss,Trimbach 2012 Gewurztraminer (Alsace),Gewürztraminer,Trimbach
+8,Germany,87,12,Rheinhessen,,Anna Lee C. Iijima,Heinz Eifel 2013 Shine Gewürztraminer (Rheinhessen),Gewürztraminer,Heinz Eifel
+9,France,87,27,Alsace,Alsace,Roger Voss,Jean-Baptiste Adam 2012 Les Natures Pinot Gris (Alsace),Pinot Gris,Jean-Baptiste Adam
+10,US,87,19,California,Napa Valley,Virginie Boone,Kirkland Signature 2011 Mountain Cuvée Cabernet Sauvignon (Napa Valley),Cabernet Sauvignon,Kirkland Signature
+11,France,87,30,Alsace,Alsace,Roger Voss,Leon Beyer 2012 Gewurztraminer (Alsace),Gewürztraminer,Leon Beyer
+12,US,87,34,California,Alexander Valley,Virginie Boone,Louis M. Martini 2012 Cabernet Sauvignon (Alexander Valley),Cabernet Sauvignon,Louis M. Martini
+13,Italy,87,,Sicily & Sardinia,Etna,Kerin O’Keefe,Masseria Setteporte 2012 Rosso  (Etna),Nerello Mascalese,Masseria Setteporte
+14,US,87,12,California,Central Coast,Matt Kettmann,Mirassou 2012 Chardonnay (Central Coast),Chardonnay,Mirassou
+15,Germany,87,24,Mosel,,Anna Lee C. Iijima,Richard Böcking 2013 Devon Riesling (Mosel),Riesling,Richard Böcking
+16,Argentina,87,30,Other,Cafayate,Michael Schachner,Felix Lavaque 2010 Felix Malbec (Cafayate),Malbec,Felix Lavaque
+17,Argentina,87,13,Mendoza Province,Mendoza,Michael Schachner,Gaucho Andino 2011 Winemaker Selection Malbec (Mendoza),Malbec,Gaucho Andino
+18,Spain,87,28,Northern Spain,Ribera del Duero,Michael Schachner,Pradorey 2010 Vendimia Seleccionada Finca Valdelayegua Single Vineyard Crianza  (Ribera del Duero),Tempranillo Blend,Pradorey
+19,US,87,32,Virginia,Virginia,Alexander Peartree,Quiévremont 2012 Meritage (Virginia),Meritage,Quiévremont
+20,US,87,23,Virginia,Virginia,Alexander Peartree,Quiévremont 2012 Vin de Maison Red (Virginia),Red Blend,Quiévremont
+21,US,87,20,Oregon,Oregon,Paul Gregutt,Acrobat 2013 Pinot Noir (Oregon),Pinot Noir,Acrobat
+22,Italy,87,19,Sicily & Sardinia,Sicilia,Kerin O’Keefe,Baglio di Pianetto 2007 Ficiligno White (Sicilia),White Blend,Baglio di Pianetto
+23,US,87,22,California,Paso Robles,Matt Kettmann,Bianchi 2011 Signature Selection Merlot (Paso Robles),Merlot,Bianchi
+24,Italy,87,35,Sicily & Sardinia,Sicilia,Kerin O’Keefe,Canicattì 2009 Aynat Nero d'Avola (Sicilia),Nero d'Avola,Canicattì
+25,US,87,69,California,Sonoma Coast,Virginie Boone,Castello di Amorosa 2011 King Ridge Vineyard Pinot Noir (Sonoma Coast),Pinot Noir,Castello di Amorosa
+26,Italy,87,13,Sicily & Sardinia,Terre Siciliane,Kerin O’Keefe,Stemmari 2013 Dalila White (Terre Siciliane),White Blend,Stemmari
+27,Italy,87,10,Sicily & Sardinia,Terre Siciliane,Kerin O’Keefe,Stemmari 2013 Nero d'Avola (Terre Siciliane),Nero d'Avola,Stemmari
+28,Italy,87,17,Sicily & Sardinia,Cerasuolo di Vittoria,Kerin O’Keefe,Terre di Giurfo 2011 Mascaria Barricato  (Cerasuolo di Vittoria),Red Blend,Terre di Giurfo
+29,US,86,16,California,Clarksburg,Virginie Boone,Clarksburg Wine Company 2010 Chenin Blanc (Clarksburg),Chenin Blanc,Clarksburg Wine Company
+30,France,86,,Beaujolais,Beaujolais-Villages,Roger Voss,Domaine de la Madone 2012 Nouveau  (Beaujolais-Villages),Gamay,Domaine de la Madone
+31,Italy,86,,Sicily & Sardinia,Sicilia,,Duca di Salaparuta 2010 Calanìca Nero d'Avola-Merlot Red (Sicilia),Red Blend,Duca di Salaparuta
+32,Italy,86,,Sicily & Sardinia,Sicilia,,Duca di Salaparuta 2011 Calanìca Grillo-Viognier White (Sicilia),White Blend,Duca di Salaparuta
+33,US,86,50,California,Dry Creek Valley,,Envolve 2010 Puma Springs Vineyard Red (Dry Creek Valley),Red Blend,Envolve
+34,US,86,20,California,Sonoma Valley,,Envolve 2011 Sauvignon Blanc (Sonoma Valley),Sauvignon Blanc,Envolve
+35,US,86,50,Oregon,McMinnville,Paul Gregutt,Erath 2010 Hyland Pinot Noir (McMinnville),Pinot Noir,Erath
+36,Chile,86,15,Colchagua Valley,,Michael Schachner,Estampa 2011 Estate Viognier-Chardonnay (Colchagua Valley),Viognier-Chardonnay,Estampa
+37,Italy,86,21,Sicily & Sardinia,Sicilia,,Feudi del Pisciotto 2010 Missoni Cabernet Sauvignon (Sicilia),Cabernet Sauvignon,Feudi del Pisciotto
+38,Italy,86,11,Southern Italy,Puglia,,Feudi di San Marzano 2011 I Tratturi Primitivo (Puglia),Primitivo,Feudi di San Marzano
+39,Italy,86,12,Sicily & Sardinia,Sicilia,,Feudo di Santa Tresa 2011 Purato Made With Organic Grapes Nero d'Avola (Sicilia),Nero d'Avola,Feudo di Santa Tresa
+40,Italy,86,17,Sicily & Sardinia,Sicilia,,Feudo Montoni 2011 Catarratto (Sicilia),Catarratto,Feudo Montoni
+41,US,86,22,Oregon,Willamette Valley,Paul Gregutt,Hawkins Cellars 2009 Pinot Noir (Willamette Valley),Pinot Noir,Hawkins Cellars
+42,France,86,9,Beaujolais,Beaujolais,Roger Voss,Henry Fessy 2012 Nouveau  (Beaujolais),Gamay,Henry Fessy
+43,US,86,14,California,Paso Robles,,Robert Hall 2011 Sauvignon Blanc (Paso Robles),Sauvignon Blanc,Robert Hall
+44,Chile,86,9,Maule Valley,,Michael Schachner,Sundance 2011 Merlot (Maule Valley),Merlot,Sundance
+45,US,86,40,Virginia,Virginia,,Tarara 2010 #SocialSecret Red (Virginia),Red Blend,Tarara
+46,Italy,86,13,Sicily & Sardinia,Sicilia,,Tasca d'Almerita 2011 Sallier de la Tour Inzolia (Sicilia),Inzolia,Tasca d'Almerita
+47,US,86,13,California,Lake County,,The White Knight 2011 Riesling (Lake County),Riesling,The White Knight
+48,US,86,16,Virginia,Monticello,,Trump 2011 Sauvignon Blanc (Monticello),Sauvignon Blanc,Trump
+49,France,86,14,Beaujolais,Brouilly,Roger Voss,Vignerons de Bel Air 2011 Eté Indien  (Brouilly),Gamay,Vignerons de Bel Air
+50,Italy,86,,Sicily & Sardinia,Sicilia,,Viticultori Associati Canicatti 2008 Scialo Red (Sicilia),Red Blend,Viticultori Associati Canicatti
+51,Chile,85,22,Colchagua Valley,,Michael Schachner,Casa Silva 2008 Gran Reserva Petit Verdot (Colchagua Valley),Petit Verdot,Casa Silva
+52,Italy,85,14,Sicily & Sardinia,Monica di Sardegna,,Cantine di Dolianova 2010 Dolia  (Monica di Sardegna),Monica,Cantine di Dolianova
+53,France,85,15,Bordeaux,Bordeaux Blanc,Roger Voss,Château de Sours 2011 La Fleur d'Amélie  (Bordeaux Blanc),Bordeaux-style White Blend,Château de Sours
+54,Italy,85,,Sicily & Sardinia,Sicilia,,Corvo 2010 Rosso Red (Sicilia),Red Blend,Corvo
+55,US,85,30,California,Napa Valley,,RustRidge 2010 Estate Bottled Chardonnay (Napa Valley),Chardonnay,RustRidge
+56,US,85,14,California,North Coast,Virginie Boone,Souverain 2010 Chardonnay (North Coast),Chardonnay,Souverain
+57,Italy,85,13,Sicily & Sardinia,Sicilia,,Tasca d'Almerita 2011 Sallier de la Tour Grillo (Sicilia),Grillo,Tasca d'Almerita
+58,Chile,85,13,Maipo Valley,,Michael Schachner,Tres Palacios 2011 Reserve Pinot Noir (Maipo Valley),Pinot Noir,Tres Palacios
+59,US,86,55,Washington,Columbia Valley (WA),Sean P. Sullivan,Mellisoni 2014 Malbec (Columbia Valley (WA)),Malbec,Mellisoni
+60,US,86,100,California,Napa Valley,Virginie Boone,Okapi 2013 Estate Cabernet Sauvignon (Napa Valley),Cabernet Sauvignon,Okapi
+61,Italy,86,17,Central Italy,Romagna,Kerin O’Keefe,Podere dal Nespoli 2015 Prugneto Sangiovese (Romagna),Sangiovese,Podere dal Nespoli
+62,US,86,25,Washington,Columbia Valley (WA),Sean P. Sullivan,Ram 2014 Alder Ridge Vineyard Cabernet Franc (Columbia Valley (WA)),Cabernet Franc,Ram
+63,France,86,58,Champagne,Champagne,Roger Voss,Roland Champion NV Brut Rosé  (Champagne),Champagne Blend,Roland Champion
+64,US,86,26,California,Santa Ynez Valley,Matt Kettmann,Sevtap 2015 Golden Horn Sauvignon Blanc (Santa Ynez Valley),Sauvignon Blanc,Sevtap
+65,France,86,24,Burgundy,Chablis,Roger Voss,Simonnet-Febvre 2015  Chablis,Chardonnay,Simonnet-Febvre
+66,France,86,15,Burgundy,Mâcon-Milly Lamartine,Roger Voss,Vignerons des Terres Secrètes 2015  Mâcon-Milly Lamartine,Chardonnay,Vignerons des Terres Secrètes
+67,US,86,46,Washington,Columbia Valley (WA),Sean P. Sullivan,Basel Cellars 2013 Inspired Red (Columbia Valley (WA)),Bordeaux-style Red Blend,Basel Cellars
+68,US,86,12,California,California,Jim Gordon,Cocobon 2014 Red (California),Red Blend,Cocobon
+69,France,86,55,Champagne,Champagne,Roger Voss,Collet NV Brut Rosé  (Champagne),Champagne Blend,Collet
+70,US,86,12,Washington,Columbia Valley (WA),Sean P. Sullivan,Drumheller 2014 Chardonnay (Columbia Valley (WA)),Chardonnay,Drumheller
+71,US,86,40,California,Alexander Valley,Virginie Boone,Eco Terreno 2013 Old Vine Cabernet Sauvignon (Alexander Valley),Cabernet Sauvignon,Eco Terreno
+72,Italy,86,32,Southern Italy,Aglianico del Vulture,Kerin O’Keefe,Grifalco 2013 Daginestra  (Aglianico del Vulture),Aglianico,Grifalco
+73,US,86,75,California,Howell Mountain,Virginie Boone,Hindsight 2013 Bella Vetta Vineyard Cabernet Sauvignon (Howell Mountain),Cabernet Sauvignon,Hindsight
+74,US,86,55,California,Calistoga,Virginie Boone,Hindsight 2012 Estate Grown Petite Sirah (Calistoga),Petite Sirah,Hindsight
+75,US,86,75,California,Napa Valley,Virginie Boone,Mulvane Wine Co. 2013 The Cypher Red (Napa Valley),Bordeaux-style Red Blend,Mulvane Wine Co.
+76,Germany,86,9,Rheinhessen,,Anna Lee C. Iijima,Schmitt Söhne 2015 Riesling (Rheinhessen),Riesling,Schmitt Söhne
+77,Australia,86,18,South Australia,South Australia,Joe Czerwinski,Yalumba 2016 Made With Organic Grapes Chardonnay (South Australia),Chardonnay,Yalumba
+78,US,86,25,Oregon,Eola-Amity Hills,Paul Gregutt,Z'IVO 2015 Rosé of Pinot Noir (Eola-Amity Hills),Pinot Noir,Z'IVO
+79,Portugal,86,,Tejo,,Roger Voss,Adega Cooperativa do Cartaxo 2014 Bridão Touriga Nacional (Tejo),Touriga Nacional,Adega Cooperativa do Cartaxo
+80,Chile,86,12,Rapel Valley,,Michael Schachner,Aresti 2014 Special Release Reserva Carmenère (Rapel Valley),Carmenère,Aresti
+81,Spain,86,16,Galicia,Rías Baixas,Michael Schachner,Spyro 2014 Albariño (Rías Baixas),Albariño,Spyro
+82,France,86,11,France Other,Vin de France,Roger Voss,Lionel Osmin & Cie 2016 La Réserve Petit Manseng (Vin de France),Petit Manseng,Lionel Osmin & Cie
+83,Australia,86,20,South Australia,McLaren Vale,Joe Czerwinski,Mitolo 2016 Jester Sangiovese Rosé (McLaren Vale),Rosé,Mitolo
+84,US,86,24,California,Napa Valley,Virginie Boone,Napa Cellars 2014 Classic Zinfandel (Napa Valley),Zinfandel,Napa Cellars
+85,Germany,86,10,Rheinhessen,,Anna Lee C. Iijima,P.J. Valckenberg 2015 Undone Dry Riesling (Rheinhessen),Riesling,P.J. Valckenberg
+86,US,86,20,Washington,Ancient Lakes,Sean P. Sullivan,Palencia 2016 Albariño (Ancient Lakes),Albariño,Palencia
+87,US,86,55,California,Knights Valley,Virginie Boone,Passaggio 2014 Blau Vineyards Merlot (Knights Valley),Merlot,Passaggio
+88,Italy,86,29,Tuscany,Vernaccia di San Gimignano,Kerin O’Keefe,Poggio Alloro 2014 Le Mandorle Riserva  (Vernaccia di San Gimignano),Vernaccia,Poggio Alloro
+89,Italy,88,19,Tuscany,Toscana,Kerin O’Keefe,Fattoria Sardi 2015 Rosato (Toscana),Rosato,Fattoria Sardi
+90,US,88,23,California,Sonoma County,Virginie Boone,Ferrari-Carano 2014 Siena Red (Sonoma County),Red Blend,Ferrari-Carano
+91,US,88,18,California,Sonoma Coast,Virginie Boone,Folie à Deux 2015 Pinot Gris (Sonoma Coast),Pinot Gris,Folie à Deux
+92,US,88,55,California,Napa Valley,Virginie Boone,Franciscan 2013 Magnificat Meritage (Napa Valley),Meritage,Franciscan
+93,Austria,88,12,Burgenland,,Anne Krebiehl MW,Fuchs 2015 Grüner Veltliner (Burgenland),Grüner Veltliner,Fuchs
+94,US,88,22,Washington,Columbia Valley (WA),Sean P. Sullivan,Gård 2014 Grand Klasse Reserve Lawrence Vineyards Viognier (Columbia Valley (WA)),Viognier,Gård
+95,France,88,20,Beaujolais,Juliénas,Roger Voss,Henry Fessy 2015  Juliénas,Gamay,Henry Fessy
+96,France,88,18,Beaujolais,Régnié,Roger Voss,Henry Fessy 2015  Régnié,Gamay,Henry Fessy
+97,US,88,20,New York,Finger Lakes,Anna Lee C. Iijima,Heron Hill 2015 Ingle Vineyard Riesling (Finger Lakes),Riesling,Heron Hill
+98,Italy,88,30,Tuscany,Morellino di Scansano,Kerin O’Keefe,Serpaia di Endrizzi 2010 Dono Riserva  (Morellino di Scansano),Sangiovese,Serpaia di Endrizzi
+99,US,88,75,California,Napa Valley,Virginie Boone,Soquel Vineyards 2013 Intreccio Library Selection Red (Napa Valley),Bordeaux-style Red Blend,Soquel Vineyards
+100,US,88,18,New York,Finger Lakes,Anna Lee C. Iijima,Ventosa 2015 Pinot Gris (Finger Lakes),Pinot Gris,Ventosa
+101,US,87,20,New York,Finger Lakes,Anna Lee C. Iijima,Lamoreaux Landing 2014 Red Oak Vineyard Riesling (Finger Lakes),Riesling,Lamoreaux Landing
+102,US,87,20,New York,Finger Lakes,Anna Lee C. Iijima,Lamoreaux Landing 2014 Yellow Dog Vineyard Riesling (Finger Lakes),Riesling,Lamoreaux Landing
+103,Chile,87,18,Leyda Valley,,Michael Schachner,Leyda 2015 Single Vineyard Falaris Hill Chardonnay (Leyda Valley),Chardonnay,Leyda
+104,Italy,87,16,Tuscany,Toscana,Kerin O’Keefe,Madonna Alta 2014 Nativo Red (Toscana),Red Blend,Madonna Alta
+105,Italy,87,14,Tuscany,Toscana,Kerin O’Keefe,Marchesi Antinori 2015 Villa Antinori White (Toscana),White Blend,Marchesi Antinori
+106,Italy,87,30,Tuscany,Toscana,Kerin O’Keefe,Marchesi de' Frescobaldi 2014 Castiglioni Red (Toscana),Red Blend,Marchesi de' Frescobaldi
+107,Italy,87,18,Tuscany,Toscana,Kerin O’Keefe,Marchesi de' Frescobaldi 2015 Ammiraglia Massovivo Vermentino (Toscana),Vermentino,Marchesi de' Frescobaldi
+108,US,87,26,California,Santa Clara Valley,Matt Kettmann,Martin Ranch 2014 J.D. Hurley Zinfandel (Santa Clara Valley),Zinfandel,Martin Ranch
+109,Italy,87,30,Tuscany,Toscana,Kerin O’Keefe,Ornellaia 2014 Le Volte Red (Toscana),Red Blend,Ornellaia
+110,France,87,23,Beaujolais,Brouilly,Roger Voss,Pardon et Fils 2015 Les Quartelets  (Brouilly),Gamay,Pardon et Fils
+111,US,87,85,California,Yountville,Virginie Boone,Piña 2013 Wolff Vineyard Cabernet Sauvignon (Yountville),Cabernet Sauvignon,Piña
+112,Italy,87,15,Tuscany,Toscana,Kerin O’Keefe,Podere Ciona 2014 Semifonte Red (Toscana),Red Blend,Podere Ciona
+113,Italy,87,19,Tuscany,Toscana,Kerin O’Keefe,Poggioventoso 2015 Poetico White (Toscana),White Blend,Poggioventoso
+114,US,87,18,California,Paso Robles,Matt Kettmann,Pull 2012 BDX Red (Paso Robles),Bordeaux-style Red Blend,Pull
+115,US,87,18,California,Paso Robles,Matt Kettmann,Pull 2013 Chardonnay (Paso Robles),Chardonnay,Pull
+116,US,87,25,California,Santa Ynez Valley,Matt Kettmann,R2 2013 Camp 4 Vineyard Grenache Blanc (Santa Ynez Valley),Grenache Blanc,R2
+117,US,87,44,California,Central Coast,Matt Kettmann,Rideau 2014 Estate Syrah,Syrah,Rideau
+118,Italy,87,80,Tuscany,Toscana,Kerin O’Keefe,Tenuta Forconi 2013 Toscano Red (Toscana),Red Blend,Tenuta Forconi
+119,France,92,80,Alsace,Alsace,,Dopff & Irion 2004 Schoenenbourg Grand Cru Vendanges Tardives Riesling (Alsace),Riesling,Dopff & Irion
+120,Italy,92,70,Piedmont,Barolo,,Ceretto 2003 Bricco Rocche Prapó  (Barolo),Nebbiolo,Ceretto
+121,US,92,36,California,Alexander Valley,,Matrix 2007 Stuhlmuller Vineyard Chardonnay (Alexander Valley),Chardonnay,Matrix
+122,US,92,39,California,Rockpile,,Mauritson 2007 Rockpile Cemetary Vineyard Zinfandel (Rockpile),Zinfandel,Mauritson
+123,Australia,92,40,South Australia,Padthaway,Joe Czerwinski,Henry's Drive Vignerons 2006 Parson's Flat Shiraz-Cabernet Sauvignon (Padthaway),Shiraz-Cabernet Sauvignon,Henry's Drive Vignerons
+124,US,92,45,California,Napa Valley,,Silverado 2006 Cabernet Sauvignon (Napa Valley),Cabernet Sauvignon,Silverado
+125,South Africa,91,45,Stellenbosch,,Roger Voss,Le Riche 2003 Cabernet Sauvignon Reserve Cabernet Sauvignon (Stellenbosch),Cabernet Sauvignon,Le Riche
+126,France,91,48,Alsace,Alsace,,Pierre Sparr 2007 Vendages Tardives Gewurztraminer (Alsace),Gewürztraminer,Pierre Sparr
+127,France,91,13,Alsace,Alsace,,Pierre Sparr 2008 Alsace One White (Alsace),White Blend,Pierre Sparr
+128,France,91,17,Alsace,Alsace,,Kuentz-Bas 2008 Pinot Blanc (Alsace),Pinot Blanc,Kuentz-Bas
+129,South Africa,91,25,Stellenbosch,,,Camberley 2004 Philosophers' Stone Red (Stellenbosch),Bordeaux-style Red Blend,Camberley
+130,Italy,91,70,Piedmont,Barolo,,Ceretto 2003 Bricco Rocche Brunate  (Barolo),Nebbiolo,Ceretto
+131,France,91,20,Alsace,Alsace,,Dopff & Irion 2008 Gentil White (Alsace),Alsace white blend,Dopff & Irion
+132,South Africa,91,30,Simonsberg-Stellenbosch,,Roger Voss,Delheim 2001 Grand Reserve Cabernet Sauvignon (Simonsberg-Stellenbosch),Cabernet Sauvignon,Delheim
+133,Italy,91,68,Piedmont,Barolo,,Poderi Luigi Einaudi 2003  Barolo,Nebbiolo,Poderi Luigi Einaudi
+134,US,91,78,California,Napa Valley,,Clark-Clauden 2007 Cabernet Sauvignon (Napa Valley),Cabernet Sauvignon,Clark-Clauden
+135,Italy,91,60,Piedmont,Barolo,,Giacomo Ascheri 2001 Sorano  (Barolo),Nebbiolo,Giacomo Ascheri
+136,France,91,50,Bordeaux,Saint-Émilion,Joe Czerwinski,Lassègue 2003  Saint-Émilion,Bordeaux-style Red Blend,Lassègue
+137,South Africa,90,,Walker Bay,,Roger Voss,Beaumont 2005 Hope Marguerite Chenin Blanc (Walker Bay),Chenin Blanc,Beaumont
+138,France,90,10,Alsace,Alsace,,Dopff & Irion 2008 Crustacés White (Alsace),Alsace white blend,Dopff & Irion
+139,France,90,112,Alsace,Alsace,,Kuentz-Bas 2007 Cuvée Jerémy Sélection de Grains Nobles Pinot Gris (Alsace),Pinot Gris,Kuentz-Bas
+140,Italy,90,26,Piedmont,Barbera d'Alba,,Poderi Colla 2005 Costa Bruna  (Barbera d'Alba),Barbera,Poderi Colla
+141,Italy,90,45,Piedmont,Barolo,,Giacomo Ascheri 2003 Vigna dei Pola  (Barolo),Nebbiolo,Giacomo Ascheri
+142,US,90,17,California,Santa Lucia Highlands,,Banyan 2007 Riesling (Santa Lucia Highlands),Riesling,Banyan
+143,France,90,84,Alsace,Alsace,,Domaine Zind-Humbrecht 2007 Hunawihr Clos Windsbuhl Pinot Gris (Alsace),Pinot Gris,Domaine Zind-Humbrecht
+144,US,91,85,California,Spring Mountain District,Virginie Boone,Terra Valentine 2013 K Block Cabernet Sauvignon (Spring Mountain District),Cabernet Sauvignon,Terra Valentine
+145,US,91,64,California,Santa Lucia Highlands,Matt Kettmann,Testarossa 2013 Guidotti Vineyard Pinot Noir (Santa Lucia Highlands),Pinot Noir,Testarossa
+146,US,91,68,California,Santa Ynez Valley,Matt Kettmann,Vincent Vineyards 2010 Family Reserve Cabernet Sauvignon (Santa Ynez Valley),Cabernet Sauvignon,Vincent Vineyards
+147,US,91,68,California,Santa Ynez Valley,Matt Kettmann,Vincent Vineyards 2012 Family Reserve Cabernet Sauvignon (Santa Ynez Valley),Cabernet Sauvignon,Vincent Vineyards
+148,Germany,91,16,Rheinhessen,,Anna Lee C. Iijima,Weingut Liebfrauenstift 2014 Dry Riesling (Rheinhessen),Riesling,Weingut Liebfrauenstift
+149,US,91,35,California,Monterey,Matt Kettmann,Wrath 2013 Destruction Level Red (Monterey),Rhône-style Red Blend,Wrath
+150,US,91,25,California,Napa Valley,Virginie Boone,Yardstick 2013 Ruth's Reach Cabernet Sauvignon (Napa Valley),Cabernet Sauvignon,Yardstick
