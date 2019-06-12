@@ -18,19 +18,10 @@ url = config.url
 engine = sqlalchemy.create_engine(url)
 
 
-# inspector = inspect(engine)
-# for table_name in inspector.get_table_names():
-#    print(table_name)
-#    for column in inspector.get_columns(table_name):
-#        print("Column: %s" % column['name'])
-
-
-production_df = pd.read_sql("SELECT * FROM production_db", engine)
-consumption_df = pd.read_sql("SELECT * FROM consumption_db", engine)
-population_df = pd.read_sql("SELECT * FROM population_db", engine)
-
-winemag_df = pd.read_sql("SELECT * FROM winemag_db", engine)
-
+total_consumption_df = pd.read_sql("SELECT * FROM total_consumption", engine)
+emissions_df = pd.read_sql("SELECT * FROM emissions", engine)
+# population_df = pd.read_sql("SELECT * FROM population_db", engine)
+# winemag_df = pd.read_sql("SELECT * FROM winemag_db", engine)
 
 
 app = Flask(__name__)
@@ -39,45 +30,45 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/production/<country>")
-def production(country):
-
-    data = {
-        "year": population_df.year.values.tolist(),
-        "production": production_df[country].values.tolist(),
-    }
-    return jsonify(data)
-
 @app.route("/consumption/<country>")
 def consumption(country):
 
     data = {
-        "year": population_df.year.values.tolist(),
-        "consumption": consumption_df[country].values.tolist(),
+        "year": total_consumption_df.Year.values.tolist(),
+        "consumption": total_consumption_df[country].values.tolist(),
     }
     return jsonify(data)
 
-
-@app.route("/population/<country>")
-def population(country):
+@app.route("/emissions/<country>")
+def emissions(country):
 
     data = {
-        "year": population_df.year.values.tolist(),
-        "population": population_df[country].values.tolist(),
+        "year": emissions_df.Year.values.tolist(),
+        "emissions": emissions_df[country].values.tolist(),
     }
     return jsonify(data)
 
 
-@app.route("/winemag")
-def winemag():
+# @app.route("/population/<country>")
+# def population(country):
 
-    data = {
-        "country": winemag_df.country.tolist(),
-        "points": winemag_df.points.values.tolist(),
-        "price": winemag_df.price.values.tolist(),
-        "variety": winemag_df.variety.tolist(),
-    }
-    return jsonify(data)
+#     data = {
+#         "year": population_df.year.values.tolist(),
+#         "population": population_df[country].values.tolist(),
+#     }
+#     return jsonify(data)
+
+
+# @app.route("/winemag")
+# def winemag():
+
+#     data = {
+#         "country": winemag_df.country.tolist(),
+#         "points": winemag_df.points.values.tolist(),
+#         "price": winemag_df.price.values.tolist(),
+#         "variety": winemag_df.variety.tolist(),
+#     }
+#     return jsonify(data)
 
 if __name__ == "__main__":
     app.run()
