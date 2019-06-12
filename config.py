@@ -1,1 +1,1 @@
-url = 'postgres://xiacnjvpghbmfr:b3cf30fa5bf7debca00266a482ce7521d03a07f4ceea8e45b3bd6dd4d7e71951@ec2-54-163-230-199.compute-1.amazonaws.com:5432/dkkbr6cn2l5mv'
+url = 'postgres://cvkuzmyutihdti:ccb658b9dbaa9f02508c213880d12db3c0025e92aea837baa7f5f11f60a073e0@ec2-23-21-91-183.compute-1.amazonaws.com:5432/d7drrt22cf3tcf'
