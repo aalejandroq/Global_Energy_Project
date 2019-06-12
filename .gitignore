@@ -4,5 +4,7 @@ __pycache__/
 
 config.py
 
+db_key.py
+
 # Jupyter Notebook
 .ipynb_checkpoints
