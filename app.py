@@ -30,6 +30,16 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+@app.route("/countries")
+def countries():
+
+    # data = {
+    #     "year": total_consumption_df.Year.values.tolist(),
+    #     "consumption": total_consumption_df[country].values.tolist(),
+    # }
+    # return jsonify(data)
+    return jsonify(list(total_consumption_df.columns)[1:])
+
 @app.route("/consumption/<country>")
 def consumption(country):
 
