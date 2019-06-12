@@ -88,7 +88,7 @@ def coalconsumption(country):
     return jsonify(data)
 
 @app.route("/electricity_renewables/<country>")
-def electconsumption(country):
+def electrenewables(country):
 
     data = {
         "year": electricity_renewables_df.Year.values.tolist(),
