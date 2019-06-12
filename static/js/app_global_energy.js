@@ -109,16 +109,16 @@ function init() {
     // Use the first sample from the list to build the initial plots
     const firstSample = sampleNames[0];
     buildCharts(firstSample);
-    buildMetadata(firstSample);
-    buildGauge(firstSample);
+    // buildMetadata(firstSample);
+    // buildGauge(firstSample);
   });
 }
 
 function optionChanged(newSample) {
   // Fetch new data each time a new sample is selected
   buildCharts(newSample);
-  buildMetadata(newSample);
-  buildGauge(newSample);
+//   buildMetadata(newSample);
+//   buildGauge(newSample);
 }
 
 // Initialize the dashboard
