@@ -12,10 +12,10 @@ from sqlalchemy import inspect
 import config
 
 
-#engine = sqlalchemy.create_engine("sqlite:///db/winemag_short_db.sqlite")
+engine = sqlalchemy.create_engine("sqlite:///Data/Sqlite/energy_db.sqlite")
 
-url = config.url
-engine = sqlalchemy.create_engine(url)
+# url = config.url
+# engine = sqlalchemy.create_engine(url)
 
 
 total_consumption_df = pd.read_sql("SELECT * FROM total_consumption", engine)
