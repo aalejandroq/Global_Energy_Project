@@ -10,8 +10,12 @@ from flask import Flask, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import inspect
 import config
+import os
 
-
+print (os.environ)
+if not os.environ.get('DYNO'):
+    import config
+    print(config.name)
 #engine = sqlalchemy.create_engine("sqlite:///db/winemag_short_db.sqlite")
 
 url = config.url
