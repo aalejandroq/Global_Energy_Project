@@ -18,11 +18,11 @@ if not os.environ.get('DYNO'):
     print(config.name)
     
 if os.environ.get("DATABASE_URL"):
-    dburl=os.environ["DATABASE_URL"]
+    url=os.environ["DATABASE_URL"]
 else:
-    dburl = config.url
+    url = config.url
 
-engine= sqlalchemy.create_engine(dburl)
+engine= sqlalchemy.create_engine(url)
 # engine = sqlalchemy.create_engine("sqlite:///Data/Sqlite/energy_db.sqlite")
 
 # url = config.url
