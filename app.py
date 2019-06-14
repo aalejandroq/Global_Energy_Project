@@ -115,8 +115,8 @@ def emissions(country):
     }
     return jsonify(data)
 
-@app.route("/allconsumption/<country>")
-def allconsumption(country):
+@app.route("/consumption/<country>")
+def consumption(country):
 
     data = {
         "year": total_consumption_df.Year.values.tolist(),
