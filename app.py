@@ -115,6 +115,20 @@ def emissions(country):
     }
     return jsonify(data)
 
+@app.route("/allconsumption/<country>")
+def allconsumption(country):
+
+    data = {
+        "year": total_consumption_df.Year.values.tolist(),
+        "total_consumption": total_consumption_df[country].values.tolist(),
+        "oil_consumption": oil_consumption_df[country].values.tolist(),
+        "ng_consumption": ng_consumption_df[country].values.tolist(),
+        "electricity_consumption": electricity_consumption_df[country].values.tolist(),
+        "coal_consumption": coal_consumption_df[country].values.tolist(),
+        "electricity_renewables": electricity_renewables_df[country].values.tolist(),
+    }
+    return jsonify(data)
+
 
 # @app.route("/population/<country>")
 # def population(country):
