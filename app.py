@@ -9,7 +9,7 @@ from sqlalchemy import create_engine
 from flask import Flask, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import inspect
-import config
+# import config
 import os
 
 print (os.environ)
@@ -19,8 +19,8 @@ print (os.environ)
 
 # engine = sqlalchemy.create_engine("sqlite:///Data/Sqlite/energy_db.sqlite")
 
-url = config.url
-engine = sqlalchemy.create_engine(url)
+# url = config.url
+# engine = sqlalchemy.create_engine(url)
 
 
 total_consumption_df = pd.read_sql("SELECT * FROM total_consumption", engine)
