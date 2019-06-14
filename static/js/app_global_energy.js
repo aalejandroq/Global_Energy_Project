@@ -96,7 +96,7 @@ function buildCharts(sample) {
 function init() {
   // Grab a reference to the dropdown select element
   var selector = d3.select("#selDataset");
-
+console.log('hi')
   // Use the list of sample names to populate the select options
   d3.json("/countries").then((countryNames) => {
     countryNames.forEach((country) => {
