@@ -16,8 +16,12 @@ print (os.environ)
 if not os.environ.get('DYNO'):
     import config
     print(config.name)
+<<<<<<< HEAD
 
 engine = sqlalchemy.create_engine("sqlite:///Data/Sqlite/energy_db.sqlite")
+=======
+#engine = sqlalchemy.create_engine("sqlite:///db/winemag_short_db.sqlite")
+>>>>>>> 70a794d3428a8673b8809a1bb75afefb7b93e486
 
 # url = config.url
 # engine = sqlalchemy.create_engine(url)

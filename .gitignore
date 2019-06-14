@@ -8,3 +8,5 @@ db_key.py
 
 # Jupyter Notebook
 .ipynb_checkpoints
+
+.DS_Store
