@@ -9,14 +9,20 @@ from sqlalchemy import create_engine
 from flask import Flask, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import inspect
-# import config
+import config
 import os
 
-print (os.environ)
-# if not os.environ.get('DYNO'):
-#     import config
-#     print(config.name)
+# print (os.environ)
+if not os.environ.get('DYNO'):
+    import config
+    print(config.name)
+    
+if os.environ.get("DATABASE_URL"):
+    dburl=os.environ["DATABASE_URL"]
+else:
+    dburl = config.url
 
+engine= sqlalchemy.create_engine(dburl)
 # engine = sqlalchemy.create_engine("sqlite:///Data/Sqlite/energy_db.sqlite")
 
 # url = config.url
