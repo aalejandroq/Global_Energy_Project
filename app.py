@@ -34,7 +34,7 @@ electricity_consumption_df = pd.read_sql("SELECT * FROM electricity_consumption"
 ng_consumption_df = pd.read_sql("SELECT * FROM ng_consumption", engine)
 oil_consumption_df = pd.read_sql("SELECT * FROM oil_consumption", engine)
 electricity_renewables_df = pd.read_sql("SELECT * FROM electricity_renewables_share", engine)
-
+gdp_df = pd.read_sql("SELECT * FROM gdp_table", engine)
 
 
 app = Flask(__name__)
