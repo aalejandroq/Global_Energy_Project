@@ -13,18 +13,14 @@ import config
 import os
 
 print (os.environ)
-if not os.environ.get('DYNO'):
-    import config
-    print(config.name)
-<<<<<<< HEAD
+# if not os.environ.get('DYNO'):
+#     import config
+#     print(config.name)
 
-engine = sqlalchemy.create_engine("sqlite:///Data/Sqlite/energy_db.sqlite")
-=======
-#engine = sqlalchemy.create_engine("sqlite:///db/winemag_short_db.sqlite")
->>>>>>> 70a794d3428a8673b8809a1bb75afefb7b93e486
+# engine = sqlalchemy.create_engine("sqlite:///Data/Sqlite/energy_db.sqlite")
 
-# url = config.url
-# engine = sqlalchemy.create_engine(url)
+url = config.url
+engine = sqlalchemy.create_engine(url)
 
 
 total_consumption_df = pd.read_sql("SELECT * FROM total_consumption", engine)
