@@ -129,6 +129,23 @@ def consumption(country):
     }
     return jsonify(data)
 
+# Prob need to improve the route so it it returns data for a give country or a given year
+@app.route("/gdp")
+def gdp():
+
+    data = {
+        "country": gdp_df.Country.values.tolist(),
+        "year": gdp_df.Year.values.tolist(),
+        "agriculture": gdp_df.Agriculture.values.tolist(),
+        "mining": gdp_df.Mining.values.tolist(),
+        "manufacturing": gdp_df.Manufacturing.values.tolist(),
+        "construction": gdp_df.Construction.values.tolist(),
+        "wholesale": gdp_df.Wholesale.values.tolist(),
+        "transport": gdp_df.Transport.values.tolist(),
+        "other": gdp_df.Other.values.tolist(),
+    }
+    return jsonify(data)
+
 
 # @app.route("/population/<country>")
 # def population(country):
