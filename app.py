@@ -45,7 +45,9 @@ def home():
 
 @app.route("/countries")
 def countries():
-    return jsonify(list(total_consumption_df.columns)[1:])
+    column_names = total_consumption_df.columns[1:] # Grab grab all the country names (skip column one, Year)
+    return jsonify(sorted(column_names))            # Sort country names and the retunr them
+    # return jsonify(list(total_consumption_df.columns)[1:])
 
 @app.route("/total_consumption/<country>")
 def totalconsumption(country):
