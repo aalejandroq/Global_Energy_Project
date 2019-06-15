@@ -49,61 +49,7 @@ def countries():
     return jsonify(sorted(column_names))            # Sort country names and the retunr them
     # return jsonify(list(total_consumption_df.columns)[1:])
 
-@app.route("/total_consumption/<country>")
-def totalconsumption(country):
-    data = {
-        "year": total_consumption_df.Year.values.tolist(),
-        "total_consumption": total_consumption_df[country].values.tolist(),
-    }
-    return jsonify(data)
 
-@app.route("/oil_consumption/<country>")
-def oilconsumption(country):
-    data = {
-        "year": oil_consumption_df.Year.values.tolist(),
-        "oil_consumption": oil_consumption_df[country].values.tolist(),
-    }
-    return jsonify(data)
-
-@app.route("/ng_consumption/<country>")
-def ngconsumption(country):
-    data = {
-        "year": ng_consumption_df.Year.values.tolist(),
-        "ng_consumption": ng_consumption_df[country].values.tolist(),
-    }
-    return jsonify(data)
-
-@app.route("/electricity_consumption/<country>")
-def electconsumption(country):
-    data = {
-        "year": electricity_consumption_df.Year.values.tolist(),
-        "electricity_consumption": electricity_consumption_df[country].values.tolist(),
-    }
-    return jsonify(data)
-
-@app.route("/coal_consumption/<country>")
-def coalconsumption(country):
-    data = {
-        "year": coal_consumption_df.Year.values.tolist(),
-        "coal_consumption": coal_consumption_df[country].values.tolist(),
-    }
-    return jsonify(data)
-
-@app.route("/electricity_renewables/<country>")
-def electrenewables(country):
-    data = {
-        "year": electricity_renewables_df.Year.values.tolist(),
-        "electricity_renewables": electricity_renewables_df[country].values.tolist(),
-    }
-    return jsonify(data)
-
-@app.route("/emissions/<country>")
-def emissions(country):
-    data = {
-        "year": emissions_df.Year.values.tolist(),
-        "emissions": emissions_df[country].values.tolist(),
-    }
-    return jsonify(data)
 
 @app.route("/consumption/<country>")
 def consumption(country):
