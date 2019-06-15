@@ -77,6 +77,12 @@ def gdp():
         "wholesale": gdp_df.Wholesale.values.tolist(),
         "transport": gdp_df.Transport.values.tolist(),
         "other": gdp_df.Other.values.tolist(),
+        "total": gdp_df.Total.values.tolist(),
+        "alpha2_code": gdp_df.Alpha_2_code.values.tolist(),
+        "alpha3_code": gdp_df.Alpha_3_code.values.tolist(),
+        "numeric_code": gdp_df.Numeric_code.values.tolist(),
+        "lat": gdp_df.Latitude_ave.values.tolist(),
+        "lon": gdp_df.Longitude_ave.values.tolist(),
     }
     return jsonify(data)
 
