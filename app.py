@@ -118,7 +118,7 @@ def consumption(country):
     }
     return jsonify(data)
 
-# Prob need to improve the route so it it returns data for a give country or a given year
+# Prob need to improve the route so it it returns data for a given country or a given year
 @app.route("/gdp")
 def gdp():
     data = {
