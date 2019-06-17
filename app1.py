@@ -91,7 +91,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index1.html")
+    # return render_template("index1.html")
+    return render_template("index1-W.html")
 
 @app.route("/countries")
 def countries():
@@ -131,18 +132,30 @@ def consumption(country):
     return jsonify(data)
 
 # Prob need to improve the route so it it returns data for a given country or a given year
-@app.route("/gdp")
-def gdp():
+# @app.route("/gdp")
+# def gdp():    
+#     data = {
+#         "country": gdp_df.Country.values.tolist(),
+#         "year": gdp_df.Year.values.tolist(),
+#         "agriculture": gdp_df.Agriculture.values.tolist(),
+#         "mining": gdp_df.Mining.values.tolist(),
+#         "manufacturing": gdp_df.Manufacturing.values.tolist(),
+#         "construction": gdp_df.Construction.values.tolist(),
+#         "wholesale": gdp_df.Wholesale.values.tolist(),
+#         "transport": gdp_df.Transport.values.tolist(),
+#         "other": gdp_df.Other.values.tolist(),
+#     }
+#     return jsonify(data)
+
+@app.route("/gdp/<country>")
+def gdp(country):
+    list_Col_NOT = ["Year","World","OECD","G7","BRICS","Europe","European Union","Africa","Middle-East","CIS", \
+                    "Latin America","America","North America","Asia","Pacific"]
+    df_GDP = funPreprocGDP(gdp_df,total_consumption_df,list_Col_NOT)
+
     data = {
-        "country": gdp_df.Country.values.tolist(),
-        "year": gdp_df.Year.values.tolist(),
-        "agriculture": gdp_df.Agriculture.values.tolist(),
-        "mining": gdp_df.Mining.values.tolist(),
-        "manufacturing": gdp_df.Manufacturing.values.tolist(),
-        "construction": gdp_df.Construction.values.tolist(),
-        "wholesale": gdp_df.Wholesale.values.tolist(),
-        "transport": gdp_df.Transport.values.tolist(),
-        "other": gdp_df.Other.values.tolist(),
+        "year": df_GDP.Year.values.tolist(),
+        "GDP": df_GDP[country].values.tolist()
     }
     return jsonify(data)
 
