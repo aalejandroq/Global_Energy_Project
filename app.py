@@ -110,6 +110,12 @@ def home():
     # return render_template("index1.html")
     return render_template("Dashboard.html")
 
+@app.route("/Map")
+def Map():
+
+    return render_template("Map.html")
+ 
+
 @app.route("/countries")
 def countries():
     column_names = total_consumption_df.columns[1:] # Grab grab all the country names (skip column one, Year)
@@ -200,6 +206,11 @@ def gdp(country):
 #         "variety": winemag_df.variety.tolist(),
 #     }
 #     return jsonify(data)
+
+# Route for bubble chart
+# @app.route("/bubble")
+# def bubble():  
+#   return bubble_df.to_json(orient = "records")
 
 if __name__ == "__main__":
     app.run()
