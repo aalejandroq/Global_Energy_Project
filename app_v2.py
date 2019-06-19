@@ -35,6 +35,7 @@ ng_consumption_df = pd.read_sql("SELECT * FROM ng_consumption", engine)
 oil_consumption_df = pd.read_sql("SELECT * FROM oil_consumption", engine)
 electricity_renewables_df = pd.read_sql("SELECT * FROM electricity_renewables_share", engine)
 gdp_df = pd.read_sql("SELECT * FROM gdp_table", engine)
+bubble_df = pd.read_sql("SELECT * FROM bubble_table", engine)
 
 # Function that ranks a country for a specific topic
 def funRankCountry(df_data,enertype,list_Col_NOT,country):
@@ -56,36 +57,7 @@ def funRankCountry(df_data,enertype,list_Col_NOT,country):
         
     return list_dict_x[0]
 
-# Function that adapts the df_GDP to a structure to be used in "funRankCountry"
 
-# def funPreprocGDP(df_GDP,df_Name,list_Col_NOT):
-    # list_countries = list(df_GDP["Country"].unique())
-    # count = 0
-    # for country in list_countries:
-    #     df_country = df_GDP.loc[df_GDP["Country"]==country][["Year","Total"]]
-    #     df_country.rename(columns={'Total': country}, inplace=True)
-    #     if count == 0:
-    #         df_final = df_country
-    #         count += 1
-    #     else:
-    #         df_final = pd.merge(df_final, df_country, on='Year', how='inner')
-            
-    # df = df_Name.copy()    
-    # list_Col_2Ext = [x for x in df.columns if x not in list_Col_NOT]    
-    # list_Col_GDP = list(df_final.columns)
-    
-    # new_list_GDP = []
-    # old_list_GDP = []
-    # for x in list_Col_2Ext:
-    #     for y in list_Col_GDP:
-    #         if (x in y) & (len(y)>len(x)):
-    #             new_list_GDP.append(x)
-    #             old_list_GDP.append(y)
-
-    # for i in range(len(new_list_GDP)):
-    #     df_final = df_final.rename(columns={old_list_GDP[i]: new_list_GDP[i]})
-    
-    # return df_final
 def funPreprocGDP(df_GDP):
     list_countries = list(df_GDP["Country"].unique())
     count = 0
@@ -97,8 +69,6 @@ def funPreprocGDP(df_GDP):
             count += 1
         else:
             df_final = pd.merge(df_final, df_country, on='Year', how='inner')
-            
-
     
     return df_final
 
@@ -110,17 +80,10 @@ def home():
     # return render_template("index1.html")
     return render_template("Dashboard.html")
 
-@app.route("/Map")
-def Map():
-
-    return render_template("Map.html")
- 
-
 @app.route("/countries")
 def countries():
     column_names = total_consumption_df.columns[1:] # Grab grab all the country names (skip column one, Year)
-    return jsonify(sorted(column_names))            # Sort country names and the retunr them
-    # return jsonify(list(total_consumption_df.columns)[1:])
+    return jsonify(sorted(column_names))            # Sort country names and the returns them
 
 
 @app.route("/rank/<country>")
@@ -146,71 +109,51 @@ def rank(country):
 def consumption(country):
     data = {
         "year": total_consumption_df.Year.values.tolist(),
-        "total_consumption": total_consumption_df[country].values.tolist(),
+        # "total_consumption": total_consumption_df[country].values.tolist(),
         "oil_consumption": oil_consumption_df[country].values.tolist(),
         "ng_consumption": ng_consumption_df[country].values.tolist(),
-        "electricity_consumption": electricity_consumption_df[country].values.tolist(),
         "coal_consumption": coal_consumption_df[country].values.tolist(),
-        "electricity_renewables": electricity_renewables_df[country].values.tolist(),
-       
     }
     return jsonify(data)
 
-# Prob need to improve the route so it it returns data for a given country or a given year
-# @app.route("/gdp")
-# def gdp():    
-#     data = {
-#         "country": gdp_df.Country.values.tolist(),
-#         "year": gdp_df.Year.values.tolist(),
-#         "agriculture": gdp_df.Agriculture.values.tolist(),
-#         "mining": gdp_df.Mining.values.tolist(),
-#         "manufacturing": gdp_df.Manufacturing.values.tolist(),
-#         "construction": gdp_df.Construction.values.tolist(),
-#         "wholesale": gdp_df.Wholesale.values.tolist(),
-#         "transport": gdp_df.Transport.values.tolist(),
-#         "other": gdp_df.Other.values.tolist(),
-#     }
-#     return jsonify(data)
+
+@app.route("/electricity/<country>")
+def electricity(country):
+
+    renewables = (electricity_renewables_df[country]/100) * electricity_consumption_df[country]
+    non_renewables = electricity_consumption_df[country] - renewables
+
+    data = {
+        "year": total_consumption_df.Year.values.tolist(),
+        "electricity_consumption": non_renewables.values.tolist(),
+        "electricity_renewables": renewables.values.tolist(),
+    }
+    return jsonify(data)
 
 @app.route("/gdp/<country>")
 def gdp(country):
-    list_Col_NOT = ["Year","World","OECD","G7","BRICS","Europe","European Union","Africa","Middle-East","CIS", \
-                    "Latin America","America","North America","Asia","Pacific"]
-    # df_GDP = funPreprocGDP(gdp_df,total_consumption_df,list_Col_NOT)
-    df_GDP = funPreprocGDP(gdp_df)
+
+    # Create a temp dataframe with just the for the country passed by the route
+    gdp = gdp_df[gdp_df['Country']==country]
 
     data = {
-        "year": df_GDP.Year.values.tolist(),
-        "GDP": df_GDP[country].values.tolist()
+        "year": gdp.Year.values.tolist(),
+        "agriculture": gdp.Agriculture.values.tolist(),
+        "mining": gdp.Mining.values.tolist(),
+        "manufacturing": gdp.Manufacturing.values.tolist(),
+        "construction": gdp.Construction.values.tolist(),
+        "wholesale": gdp.Wholesale.values.tolist(),
+        "transport": gdp.Transport.values.tolist(),
+        "other": gdp.Other.values.tolist() 
     }
     return jsonify(data)
 
 
-# @app.route("/population/<country>")
-# def population(country):
-
-#     data = {
-#         "year": population_df.year.values.tolist(),
-#         "population": population_df[country].values.tolist(),
-#     }
-#     return jsonify(data)
-
-
-# @app.route("/winemag")
-# def winemag():
-
-#     data = {
-#         "country": winemag_df.country.tolist(),
-#         "points": winemag_df.points.values.tolist(),
-#         "price": winemag_df.price.values.tolist(),
-#         "variety": winemag_df.variety.tolist(),
-#     }
-#     return jsonify(data)
-
 # Route for bubble chart
-# @app.route("/bubble")
-# def bubble():  
-#   return bubble_df.to_json(orient = "records")
+@app.route("/bubble")
+def bubble():  
+  return bubble_df.to_json(orient = "records")
+
 
 if __name__ == "__main__":
     app.run()
