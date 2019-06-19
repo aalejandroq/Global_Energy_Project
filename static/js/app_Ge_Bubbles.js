@@ -110,9 +110,9 @@ console.log(data)
       type: 'log'
     },
     // angel - setting size of chart
-    autosize: false,
-    width: 1200,
-    height: 700,
+    autosize: true,
+    // width: 1200,
+    // height: 700,
     hovermode: 'closest',
 	 // We'll use updatemenus (whose functionality includes menus as
 	 // well as buttons) to create a play button and a pause button.
@@ -164,9 +164,12 @@ console.log(data)
   };
 
   // Create the plot:
-  Plotly.plot('myDiv', {
-    data: traces,
-    layout: layout,
-    frames: frames,
-  });
+  // Plotly.plot('bubble-Chart', {
+  //   data: traces,
+  //   layout: layout,
+  //   frames: frames,
+  //   responsive: true,
+  // });
+  Plotly.newPlot('bubble-Chart', traces, layout, { responsive: true });
+
 });
