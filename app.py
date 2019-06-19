@@ -130,7 +130,8 @@ def rank(country):
         "Natural Gas" : funRankCountry(ng_consumption_df,"Natural Gas",list_Col_NOT,country)["Rank"],
         "Oil" : funRankCountry(oil_consumption_df,"Oil",list_Col_NOT,country)["Rank"],
         "Electr Renew": funRankCountry(electricity_renewables_df,"Electr Renew",list_Col_NOT,country)["Rank"],
-        "GDP" : funRankCountry(df_GDP,"GDP",list_Col_NOT,country)["Rank"]
+        "GDP" : funRankCountry(df_GDP,"GDP",list_Col_NOT,country)["Rank"],
+        "CO2_emissions":funRankCountry(emissions_df,"CO2 Em",list_Col_NOT,country)["Rank"]
     }
     return jsonify(dict_final)
 
@@ -145,6 +146,7 @@ def consumption(country):
         "electricity_consumption": electricity_consumption_df[country].values.tolist(),
         "coal_consumption": coal_consumption_df[country].values.tolist(),
         "electricity_renewables": electricity_renewables_df[country].values.tolist(),
+       
     }
     return jsonify(data)
 
