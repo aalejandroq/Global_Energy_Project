@@ -164,12 +164,12 @@ console.log(data)
   };
 
   // Create the plot:
-  // Plotly.plot('bubble-Chart', {
-  //   data: traces,
-  //   layout: layout,
-  //   frames: frames,
-  //   responsive: true,
-  // });
-  Plotly.newPlot('bubble-Chart', traces, layout, { responsive: true });
+  Plotly.plot('bubble-Chart', {
+    data: traces,
+    layout: layout,
+    frames: frames,
+    responsive: true,
+  });
+
 
 });
