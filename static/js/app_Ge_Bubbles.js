@@ -192,7 +192,7 @@ console.log(data)
     data: traces,
     layout: layout,
     frames: frames,
-    responsive: true,
+    
   });
 
 
