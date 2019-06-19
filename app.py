@@ -75,10 +75,30 @@ def funPreprocGDP(df_GDP):
 
 app = Flask(__name__)
 
+# -----HTML Routes------#
+
+# Dashboard Route
+
 @app.route("/")
 def home():
-    # return render_template("index1.html")
+   
     return render_template("Dashboard.html")
+
+# Maps Route
+@app.route("/Maps")
+def Maps():
+
+    return render_template("Map.html")
+ 
+#Charts Route
+@app.route("/Charts")
+def Charts():
+
+    return render_template("Charts.html")
+ 
+
+
+# ------JSON Routes-------
 
 @app.route("/countries")
 def countries():
