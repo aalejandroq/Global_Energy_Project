@@ -6,10 +6,10 @@ function buildMetadata(country) {
     // console.log(data.GDP)
     // console.log(data.Electricity)
     // console.log(data.Oil)
-    buildGauge(data.Total, "gauge", "<b>Belly Button Washing Frequency</b> <br> Scrubs per Week"),
+    buildGauge(data.Total, "gauge", "<b>Total</b> <br> Scrubs per Week"),
       buildGauge(data.GDP, "gauge_1", "GDP"),
       buildGauge(data.Electricity, "gauge_2", "Electricity"),
-      buildGauge(data.Oil, "gauge_3", "Oil");
+      buildGauge(data.CO2_emmissions, "gauge_3", "CO2_emissions");
   })
 }
 
