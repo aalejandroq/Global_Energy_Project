@@ -128,6 +128,7 @@ function buildCharts(country, graph) {
   // @TODO: Use `d3.json` to fetch the sample data for the plots
   d3.json(`${graph}/${country}`).then(function (data) {
 
+    // @TODO: Build a Bubble Chart using the sample data
 
     if (graph === "consumption") {
 
@@ -161,85 +162,10 @@ function buildCharts(country, graph) {
         stackgroup: 'one'
       };
 
-
-      var layout = {
-        title: `${country} - Energy Consumption by Sector`,
-        xaxis: { title: 'Year' },
-        yaxis: { title: 'Consumed Energy (UNITS PLEASE)' }
-      };
-
-      var all_traces = [trace1, trace2, trace3];
-    } 
-    
-    else if (graph === "electricity") {
-    
-          var trace1 = {
-            x: data.year,
-            y: data.electricity_consumption,
-            name: 'Non-Renewables',
-            fill: 'tonexty',
-            type: 'scatter',
-            mode: 'none',
-            stackgroup: 'one'
-          };
-    
-          var trace2 = {
-            x: data.year,
-            y: data.electricity_renewables,
-            name: 'Renewables',
-            fill: 'tonexty',
-            type: 'scatter',
-            mode: 'none',
-            stackgroup: 'one'
-          };
-    
-          var layout = {
-            title: `${country} - Electricity Consumption`,
-            xaxis: { title: 'Year' },
-            yaxis: { title: 'Consumed Energy (UNITS PLEASE)' }
-          };
-    
-          var all_traces = [trace1, trace2];
-
-    }
-
-    else {
-
-
-    var trace1 = {
-        x: data.year,
-        y: data.agriculture,
-        name: 'Agriculture',
-        fill: 'tonexty',
-        type: 'scatter',
-        mode: 'none',
-        stackgroup: 'one'
-      };
-
-      var trace2 = {
-        x: data.year,
-        y: data.mining,
-        name: 'Mining',
-        fill: 'tonexty',
-        type: 'scatter',
-        mode: 'none',
-        stackgroup: 'one'
-      };
-
-      var trace3 = {
-        x: data.year,
-        y: data.manufacturing,
-        name: 'Manufacturing',
-        fill: 'tonexty',
-        type: 'scatter',
-        mode: 'none',
-        stackgroup: 'one'
-      };
-
       var trace4 = {
         x: data.year,
-        y: data.construction,
-        name: 'Construction',
+        y: data.electricity_consumption,
+        name: 'Electricity',
         fill: 'tonexty',
         type: 'scatter',
         mode: 'none',
@@ -248,28 +174,8 @@ function buildCharts(country, graph) {
 
       var trace5 = {
         x: data.year,
-        y: data.wholesale,
-        name: 'Wholesale',
-        fill: 'tonexty',
-        type: 'scatter',
-        mode: 'none',
-        stackgroup: 'one'
-      };
-
-      var trace6 = {
-        x: data.year,
-        y: data.transport,
-        name: 'Transport',
-        fill: 'tonexty',
-        type: 'scatter',
-        mode: 'none',
-        stackgroup: 'one'
-      };
-
-      var trace7 = {
-        x: data.year,
-        y: data.other,
-        name: 'Other',
+        y: data.electricity_renewables,
+        name: 'Renewables',
         fill: 'tonexty',
         type: 'scatter',
         mode: 'none',
@@ -277,14 +183,34 @@ function buildCharts(country, graph) {
       };
 
       var layout = {
-        title: `${country} - GDP by Economic Sector`,
+        title: `${country} - Energy Consumption by Sector`,
         xaxis: { title: 'Year' },
-        yaxis: { title: 'GDP (UNITS PLEASE)' }
+        yaxis: { title: 'Consumed Energy (UNITS PLEASE)' }
       };
 
-      var all_traces = [trace1, trace2, trace3, trace4, trace5, trace6, trace7];
+      var all_traces = [trace1, trace2, trace3, trace4, trace5];
+    } else {
 
+      var trace1 = {
+        x: data.year,
+        y: data.GDP,
+        name: 'GDP',
+        fill: 'tozeroy',
+        type: 'scatter',
+        mode: 'none',
+        stackgroup: 'one'
+      };
+
+      var layout = {
+        title: `${country} - GDP`,
+        xaxis: { title: 'Year' },
+        yaxis: { title: 'GDP (US$)' }
+      };
+
+      var all_traces = [trace1];
     }
+
+
 
     Plotly.newPlot('temp-stacked-lineChart', all_traces, layout, { responsive: true });
 
@@ -306,7 +232,7 @@ function init() {
 
     var selector1 = d3.select("#selDataset1");
 
-    graphNames = ["consumption", "electricity", "gdp"];
+    graphNames = ["consumption", "gdp"];
     graphNames.forEach((graph) => {
       selector1
         .append("option")
