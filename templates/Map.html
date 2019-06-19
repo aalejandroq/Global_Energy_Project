@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Global Energy</title>
+  <link rel="shortcut icon" href="../static/images/Tabicon.png" />
+
+  <!-- Main HTML Style CSS-->
+  <link rel="stylesheet" href="../static/css/style.css">
+
+  <!-- Map HTML Style CSS -->
+  <link rel="stylesheet" type="text/css" href="../static/css/style-Map.css">
+
+
+  <!-- base:css -->
+  <link rel="stylesheet" href="../static/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../static/vendors/base/vendor.bundle.base.css">
+
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_horizontal-navbar.html -->
+    <div class="horizontal-menu">
+      <nav class="navbar top-navbar col-lg-12 col-12 p-0">
+        <div class="container-fluid">
+          <div class="navbar-menu-wrapper d-flex">
+
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+              <a class="navbar-brand brand-logo" href="https://globalenergy.herokuapp.com/"><img
+                  src="../static/images/Globe-Logo-lg.svg" alt="logo" /></a>
+              <!-- <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg"
+                  alt="logo" /></a> -->
+            </div>
+            <!-- 
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+              <a class="navbar-brand" href="https://globalenergy.herokuapp.com/">
+                <img src="../static/images/Globe-Logo.png" style="width:50px; height:50px"
+                  class="d-inline-block align-left" alt="">
+              </a>
+            </div> -->
+
+            <!-- <div class="navbar-header">
+              <a class="navbar-brand team-name" href="https://globalenergy.herokuapp.com"
+                style="padding-left:5px; padding-top:30px; padding-bottom:30px">
+                Global Energy Consumption Team</a>
+            </div> -->
+
+
+
+            <ul class="navbar-nav navbar-nav-right">
+
+              <li class="nav-item dropdown d-lg-flex d-none">
+                <a class="dropdown-toggle show-dropdown-arrow btn btn-inverse-primary btn-sm" id="nreportDropdown"
+                  href="#" data-toggle="dropdown">
+                  About
+                </a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                  aria-labelledby="nreportDropdown">
+                  <p class="mb-0 font-weight-medium float-left dropdown-header">Reports</p>
+                  <a class="dropdown-item">
+                    <i class="mdi mdi-file-pdf text-primary"></i>
+                    Pdf
+                  </a>
+                  <a class="dropdown-item">
+                    <i class="mdi mdi-file-excel text-primary"></i>
+                    Exel
+                  </a>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="bottom-navbar">
+        <div class="container">
+          <ul class="nav page-navigation">
+            <li class="nav-item">
+              <a class="nav-link" href="/Dashboard.html">
+                <i class="mdi mdi-map  icon-lg menu-icon"></i>
+                <span class="menu-title">Maps</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/" class="nav-link">
+                <i class="mdi mdi-cube-outline icon-lg menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+                <i class="menu-arrow"></i>
+              </a>
+
+            <li class="nav-item">
+              <a href="pages/charts/chartjs.html" class="nav-link">
+                <i class="mdi mdi-finance icon-lg menu-icon"></i>
+                <span class="menu-title">Charts</span>
+                <i class="menu-arrow"></i>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+
+  <!-- partial -->
+  <div class="container-fluid page-body-wrapper">
+    <div class="main-panel">
+      <div class="content-wrapper">
+
+
+        <div class="row mt-4">
+          <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="x_title font-weight-bold">
+                      <h2>Chart #1 <small> description</small></h2>
+
+                      <div class="filter right">
+                        <h5>SELECT Graph:</h5>
+                        <select id="selDataset1" onchange="optionChanged(selDataset.value,this.value)"
+                          style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc"></select>
+
+                      </div>
+                      <div class="filter">
+                        <h5>SELECT Country:</h5>
+                        <select id="selDataset" onchange="optionChanged(this.value,selDataset1.value)"
+                          style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                        </select>
+                      </div>
+
+
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row whitespace" style="padding-top: -150px">
+                  <div class="col-md-12">
+                    <div id="map1" style="height: 650px;"></div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- content-wrapper ends -->
+      <!-- footer-->
+      <footer class="footer">
+        <div class="footer-wrap">
+          <div class="w-100 clearfix">
+            <span class="d-block text-center text-sm-center d-sm-inline-block">GECT © 2019 <a
+                href="https://globalenergy.herokuapp.com/" target="_blank">Global Enenrgy Comsumption Team</a>. All
+              rights reserved.
+            </span>
+
+          </div>
+        </div>
+      </footer>
+    </div>
+     <!-- main-panel ends-->
+  </div>
+  <!-- container-fluid page-body-wrapper ends -->
+
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <!-- JavaScript Files-->
+  <!-- API key -->
+  <script type="text/javascript" src="../static/js/config2.js"></script>
+
+  <!-- <script type="text/javascript" src="data.js"></script>
+  <script type="text/javascript" src="logic.js"></script> -->
+
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+
+  <!-- Main JavaScript Files-->
+  <!-- <script src="{{ url_for('static', filename='js/app_GE_Dashboard.js')}}"></script> -->
+  <script src="{{ url_for('static', filename='js/data.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/logic.js')}}"></script>
+
+  <!--D3 cdn-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+
+
+  <!-- base:js -->
+  <script src="../static/vendors/base/vendor.bundle.base.js"></script>
+  <script src="{{ url_for('static', filename='js/template.js')}}"></script>
+
+
+
+</body>
+
+</html>
