@@ -57,7 +57,36 @@ def funRankCountry(df_data,enertype,list_Col_NOT,country):
     return list_dict_x[0]
 
 # Function that adapts the df_GDP to a structure to be used in "funRankCountry"
-def funPreprocGDP(df_GDP,df_Name,list_Col_NOT):
+
+# def funPreprocGDP(df_GDP,df_Name,list_Col_NOT):
+    # list_countries = list(df_GDP["Country"].unique())
+    # count = 0
+    # for country in list_countries:
+    #     df_country = df_GDP.loc[df_GDP["Country"]==country][["Year","Total"]]
+    #     df_country.rename(columns={'Total': country}, inplace=True)
+    #     if count == 0:
+    #         df_final = df_country
+    #         count += 1
+    #     else:
+    #         df_final = pd.merge(df_final, df_country, on='Year', how='inner')
+            
+    # df = df_Name.copy()    
+    # list_Col_2Ext = [x for x in df.columns if x not in list_Col_NOT]    
+    # list_Col_GDP = list(df_final.columns)
+    
+    # new_list_GDP = []
+    # old_list_GDP = []
+    # for x in list_Col_2Ext:
+    #     for y in list_Col_GDP:
+    #         if (x in y) & (len(y)>len(x)):
+    #             new_list_GDP.append(x)
+    #             old_list_GDP.append(y)
+
+    # for i in range(len(new_list_GDP)):
+    #     df_final = df_final.rename(columns={old_list_GDP[i]: new_list_GDP[i]})
+    
+    # return df_final
+def funPreprocGDP(df_GDP):
     list_countries = list(df_GDP["Country"].unique())
     count = 0
     for country in list_countries:
@@ -69,20 +98,7 @@ def funPreprocGDP(df_GDP,df_Name,list_Col_NOT):
         else:
             df_final = pd.merge(df_final, df_country, on='Year', how='inner')
             
-    df = df_Name.copy()    
-    list_Col_2Ext = [x for x in df.columns if x not in list_Col_NOT]    
-    list_Col_GDP = list(df_final.columns)
-    
-    new_list_GDP = []
-    old_list_GDP = []
-    for x in list_Col_2Ext:
-        for y in list_Col_GDP:
-            if (x in y) & (len(y)>len(x)):
-                new_list_GDP.append(x)
-                old_list_GDP.append(y)
 
-    for i in range(len(new_list_GDP)):
-        df_final = df_final.rename(columns={old_list_GDP[i]: new_list_GDP[i]})
     
     return df_final
 
@@ -92,7 +108,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     # return render_template("index1.html")
-    return render_template("index1-W.html")
+    return render_template("Dashboard.html")
 
 @app.route("/countries")
 def countries():
@@ -105,7 +121,8 @@ def countries():
 def rank(country):    
     list_Col_NOT = ["Year","World","OECD","G7","BRICS","Europe","European Union","Africa","Middle-East","CIS", \
                     "Latin America","America","North America","Asia","Pacific"]
-    df_GDP = funPreprocGDP(gdp_df,total_consumption_df,list_Col_NOT)
+    # df_GDP = funPreprocGDP(gdp_df,total_consumption_df,list_Col_NOT)
+    df_GDP = funPreprocGDP(gdp_df)
     dict_final ={
         "Total" : funRankCountry(total_consumption_df,"Total",list_Col_NOT,country)["Rank"],
         "Coal" : funRankCountry(coal_consumption_df,"Coal",list_Col_NOT,country)["Rank"],
@@ -151,7 +168,8 @@ def consumption(country):
 def gdp(country):
     list_Col_NOT = ["Year","World","OECD","G7","BRICS","Europe","European Union","Africa","Middle-East","CIS", \
                     "Latin America","America","North America","Asia","Pacific"]
-    df_GDP = funPreprocGDP(gdp_df,total_consumption_df,list_Col_NOT)
+    # df_GDP = funPreprocGDP(gdp_df,total_consumption_df,list_Col_NOT)
+    df_GDP = funPreprocGDP(gdp_df)
 
     data = {
         "year": df_GDP.Year.values.tolist(),
