@@ -4,7 +4,7 @@
 (function () {
   var d3 = Plotly.d3;
   var WIDTH_IN_PERCENT_OF_PARENT = 100,
-      HEIGHT_IN_PERCENT_OF_PARENT = 80;
+      HEIGHT_IN_PERCENT_OF_PARENT = 90;
 
   var gd3 = d3.selectAll(".responsive-plot")
       .style({
@@ -12,7 +12,7 @@
           'margin-left': (100 - WIDTH_IN_PERCENT_OF_PARENT) / 2 + '%',
 
           height: HEIGHT_IN_PERCENT_OF_PARENT + 'vh',
-          'margin-bottom': (100 - HEIGHT_IN_PERCENT_OF_PARENT) / 2 + 'vh'
+          'margin-top': (100 - HEIGHT_IN_PERCENT_OF_PARENT) / 2 + 'vh'
       });
 
   var nodes_to_resize = gd3[0];
@@ -133,8 +133,8 @@ console.log(data)
     },
     // angel - setting size of chart
     autosize: false,
-    width: 1600,
-    height: 700,
+    width: 1400,
+    height: 600,
     hovermode: 'closest',
 	 // We'll use updatemenus (whose functionality includes menus as
 	 // well as buttons) to create a play button and a pause button.
