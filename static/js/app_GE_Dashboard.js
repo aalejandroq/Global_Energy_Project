@@ -76,19 +76,19 @@ function buildGauge(level, gauge, title) {
     }],
 
     title: `${title}`,
-    height: 350,
-    width: 350,
+    height: 325,
+    width: 325,
 
     margin: {'l':0 , 'r': 10, 't': 80, 'b': 0},
     
     xaxis: {
       
       zeroline: false, showticklabels: false,
-      showgrid: false, range: [-1, 1]
+      showgrid: false, range: [-1, 1], fixedrange: true
     },
     yaxis: {
       zeroline: false, showticklabels: false,
-      showgrid: false, range: [-1, 1]
+      showgrid: false, range: [-1, 1], fixedrange: true
     }
   };
 
