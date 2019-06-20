@@ -133,7 +133,7 @@ console.log(data)
     },
     // angel - setting size of chart
     autosize: false,
-    width: 1200,
+    width: 1300,
     height: 660,
     hovermode: 'closest',
 	 // We'll use updatemenus (whose functionality includes menus as

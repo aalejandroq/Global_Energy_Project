@@ -117,7 +117,7 @@ function buildMap(countryData, param, pos, maxparam, unit,flag) {
     center: [
         10.5994, -7.6731
     ],
-    zoom: 2.0
+    zoom: 2.5
   })
   
   // Defining Listeners
