@@ -11,9 +11,7 @@
   <!-- Main HTML Style CSS-->
   <link rel="stylesheet" href="../static/css/style.css">
 
-  <!-- Map HTML Style CSS -->
-  <link rel="stylesheet" type="text/css" href="../static/css/style-Map.css">
-
+  
 
   <!-- base:css -->
   <link rel="stylesheet" href="../static/vendors/mdi/css/materialdesignicons.min.css">
@@ -113,7 +111,6 @@
     <div class="main-panel">
       <div class="content-wrapper">
 
-
         <div class="row mt-4">
           <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
@@ -122,47 +119,41 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="x_title font-weight-bold">
-                      <h2>Global Energy View</h2>
+                      <h2>Consumed Energy vs. GDP </h2>
 
-                      <div class="filter right">
+                      <!-- <div class="filter right">
                         <h5>SELECT Graph:</h5>
                         <select id="selDataset1" onchange="optionChanged(selDataset.value,this.value)"
                           style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc"></select>
 
                       </div>
-
-                      <!-- <div class="filter">
-                        <h5>SELECT Year:</h5>
+                      <div class="filter">
+                        <h5>SELECT Country:</h5>
                         <select id="selDataset" onchange="optionChanged(this.value,selDataset1.value)"
                           style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
                         </select>
                       </div> -->
-
-                      <div class="slidecontainer">
-                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-                        <input type="range" min="1990" max="2017" value="2017" step="1" class="slider" id="selDataset" onchange="optionChanged(this.value,selDataset1.value)" oninput="updateRangeInput(this)">
-                        <input type="text" value="2017">
-                      </div>
-
 
                       <div class="clearfix"></div>
                     </div>
                   </div>
                 </div>
 
-                <div class="row whitespace" style="padding-top: -150px">
+                <!-- Insert Charts -->
+                <div class="row">
                   <div class="col-md-12">
-                    <div id="map1" style="height: 900px;"></div>
-
+                    <div id="bubble-Chart" class="responsive-plot"></div>
                   </div>
-
                 </div>
 
+                <!-- card body ends -->
               </div>
+
             </div>
           </div>
-
         </div>
+        
+
       </div>
       <!-- content-wrapper ends -->
       <!-- footer-->
@@ -173,16 +164,14 @@
                 href="https://globalenergy.herokuapp.com/" target="_blank">Global Enenrgy Comsumption Team</a>. All
               rights reserved.
             </span>
-
           </div>
         </div>
       </footer>
+      <!-- main-panel ends-->
     </div>
-     <!-- main-panel ends-->
+    <!-- container-fluid page-body-wrapper ends -->
   </div>
-  <!-- container-fluid page-body-wrapper ends -->
-
-
+  
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
@@ -214,8 +203,8 @@
 
   <!-- Main JavaScript Files-->
   <!-- <script src="{{ url_for('static', filename='js/app_GE_Dashboard.js')}}"></script> -->
-  <script src="{{ url_for('static', filename='js/data.js')}}"></script>
-  <script src="{{ url_for('static', filename='js/logic.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/app_Ge_Bubbles.js')}}"></script>
+  
 
   <!--D3 cdn-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>

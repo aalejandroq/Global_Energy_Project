@@ -2,40 +2,15 @@
 function buildMetadata(country) {
 
   d3.json(`/rank/${country}`).then(function (data) {
-    // console.log(data.Total)
-    // console.log(data.GDP)
-    // console.log(data.Electricity)
-    // console.log(data.Oil)
-    buildGauge(data.Total, "gauge", "<b>Total</b> <br> Scrubs per Week"),
-      buildGauge(data.GDP, "gauge_1", "GDP"),
-      buildGauge(data.Electricity, "gauge_2", "Electricity"),
-      buildGauge(data.CO2_emmissions, "gauge_3", "CO2_emissions");
+
+    buildGauge(data.Total, "gauge", "<b>Consumed Energy</b>"),
+      buildGauge(data.GDP, "gauge_1", "<b>GDP</b>"),
+      buildGauge(data.Electricity, "gauge_2", "<b>Consumed Electricity</b>"),
+      buildGauge(data.CO2_emissions, "gauge_3", "<b>CO2 Emissions</b>");
   })
 }
 
-// MAKE THE PLOTS RESPONSIVE
-// (function () {
-//   var d3 = Plotly.d3;
-//   var WIDTH_IN_PERCENT_OF_PARENT = 110,
-//     HEIGHT_IN_PERCENT_OF_PARENT = 0;
 
-//   var gd3 = d3.selectAll(".responsive-plot")
-//     .style({
-//       width: WIDTH_IN_PERCENT_OF_PARENT + '%',
-//       'margin-left': (100 - WIDTH_IN_PERCENT_OF_PARENT) / 2 + '%',
-
-//       height: HEIGHT_IN_PERCENT_OF_PARENT + 'vh',
-//       'margin-bottom': (100 - HEIGHT_IN_PERCENT_OF_PARENT) / 2 + 'vh'
-//     });
-
-//   var nodes_to_resize = gd3[0]; //not sure why but the goods are within a nested array
-//   window.onresize = function () {
-//     for (var i = 0; i < nodes_to_resize.length; i++) {
-//       Plotly.Plots.resize(nodes_to_resize[i]);
-//     }
-//   };
-
-// })();
 
 
 
@@ -99,21 +74,21 @@ function buildGauge(level, gauge, title) {
         color: '850000'
       }
     }],
-    // title: '<b>Belly Button Washing Frequency</b> <br> Scrubs per Week',
+
     title: `${title}`,
-    height: 430,
-    width: 430,
+    height: 325,
+    width: 325,
 
     margin: {'l':0 , 'r': 10, 't': 80, 'b': 0},
     
     xaxis: {
       
       zeroline: false, showticklabels: false,
-      showgrid: false, range: [-1, 1]
+      showgrid: false, range: [-1, 1], fixedrange: true
     },
     yaxis: {
       zeroline: false, showticklabels: false,
-      showgrid: false, range: [-1, 1]
+      showgrid: false, range: [-1, 1], fixedrange: true
     }
   };
 
@@ -128,7 +103,6 @@ function buildCharts(country, graph) {
   // @TODO: Use `d3.json` to fetch the sample data for the plots
   d3.json(`${graph}/${country}`).then(function (data) {
 
-    // @TODO: Build a Bubble Chart using the sample data
 
     if (graph === "consumption") {
 
@@ -162,10 +136,85 @@ function buildCharts(country, graph) {
         stackgroup: 'one'
       };
 
+
+      var layout = {
+        title: `${country} - Fossil Fuel Consumption by Sector`,
+        xaxis: { title: 'Year' },
+        yaxis: { title: 'Consumed Energy (MTOE)' }
+      };
+
+      var all_traces = [trace1, trace2, trace3];
+    } 
+    
+    else if (graph === "electricity") {
+    
+          var trace1 = {
+            x: data.year,
+            y: data.electricity_consumption,
+            name: 'Non-Renewables',
+            fill: 'tonexty',
+            type: 'scatter',
+            mode: 'none',
+            stackgroup: 'one'
+          };
+    
+          var trace2 = {
+            x: data.year,
+            y: data.electricity_renewables,
+            name: 'Renewables',
+            fill: 'tonexty',
+            type: 'scatter',
+            mode: 'none',
+            stackgroup: 'one'
+          };
+    
+          var layout = {
+            title: `${country} - Electricity Consumption`,
+            xaxis: { title: 'Year' },
+            yaxis: { title: 'Consumed Electricity (TWh)' }
+          };
+    
+          var all_traces = [trace1, trace2];
+
+    }
+
+    else {
+
+
+    var trace1 = {
+        x: data.year,
+        y: data.agriculture,
+        name: 'Agriculture',
+        fill: 'tonexty',
+        type: 'scatter',
+        mode: 'none',
+        stackgroup: 'one'
+      };
+
+      var trace2 = {
+        x: data.year,
+        y: data.mining,
+        name: 'Mining',
+        fill: 'tonexty',
+        type: 'scatter',
+        mode: 'none',
+        stackgroup: 'one'
+      };
+
+      var trace3 = {
+        x: data.year,
+        y: data.manufacturing,
+        name: 'Manufacturing',
+        fill: 'tonexty',
+        type: 'scatter',
+        mode: 'none',
+        stackgroup: 'one'
+      };
+
       var trace4 = {
         x: data.year,
-        y: data.electricity_consumption,
-        name: 'Electricity',
+        y: data.construction,
+        name: 'Construction',
         fill: 'tonexty',
         type: 'scatter',
         mode: 'none',
@@ -174,8 +223,28 @@ function buildCharts(country, graph) {
 
       var trace5 = {
         x: data.year,
-        y: data.electricity_renewables,
-        name: 'Renewables',
+        y: data.wholesale,
+        name: 'Wholesale',
+        fill: 'tonexty',
+        type: 'scatter',
+        mode: 'none',
+        stackgroup: 'one'
+      };
+
+      var trace6 = {
+        x: data.year,
+        y: data.transport,
+        name: 'Transport',
+        fill: 'tonexty',
+        type: 'scatter',
+        mode: 'none',
+        stackgroup: 'one'
+      };
+
+      var trace7 = {
+        x: data.year,
+        y: data.other,
+        name: 'Other',
         fill: 'tonexty',
         type: 'scatter',
         mode: 'none',
@@ -183,34 +252,14 @@ function buildCharts(country, graph) {
       };
 
       var layout = {
-        title: `${country} - Energy Consumption by Sector`,
+        title: `${country} - GDP by Economic Sector`,
         xaxis: { title: 'Year' },
-        yaxis: { title: 'Consumed Energy (UNITS PLEASE)' }
+        yaxis: { title: 'GDP (2005 price $)' }
       };
 
-      var all_traces = [trace1, trace2, trace3, trace4, trace5];
-    } else {
+      var all_traces = [trace1, trace2, trace3, trace4, trace5, trace6, trace7];
 
-      var trace1 = {
-        x: data.year,
-        y: data.GDP,
-        name: 'GDP',
-        fill: 'tozeroy',
-        type: 'scatter',
-        mode: 'none',
-        stackgroup: 'one'
-      };
-
-      var layout = {
-        title: `${country} - GDP`,
-        xaxis: { title: 'Year' },
-        yaxis: { title: 'GDP (US$)' }
-      };
-
-      var all_traces = [trace1];
     }
-
-
 
     Plotly.newPlot('temp-stacked-lineChart', all_traces, layout, { responsive: true });
 
@@ -232,7 +281,7 @@ function init() {
 
     var selector1 = d3.select("#selDataset1");
 
-    graphNames = ["consumption", "gdp"];
+    graphNames = ["consumption", "electricity", "gdp"];
     graphNames.forEach((graph) => {
       selector1
         .append("option")
