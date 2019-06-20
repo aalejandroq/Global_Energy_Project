@@ -130,11 +130,18 @@
                           style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc"></select>
 
                       </div>
-                      <div class="filter">
-                        <h5>SELECT Country:</h5>
+
+                      <!-- <div class="filter">
+                        <h5>SELECT Year:</h5>
                         <select id="selDataset" onchange="optionChanged(this.value,selDataset1.value)"
                           style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
                         </select>
+                      </div> -->
+
+                      <div class="slidecontainer">
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                        <input type="range" min="1990" max="2017" value="2017" step="1" class="slider" id="selDataset" onchange="optionChanged(this.value,selDataset1.value)" oninput="updateRangeInput(this)">
+                        <input type="text" value="2017">
                       </div>
 
 
@@ -145,7 +152,7 @@
 
                 <div class="row whitespace" style="padding-top: -150px">
                   <div class="col-md-12">
-                    <div id="map1" style="height: 650px;"></div>
+                    <div id="map1" style="height: 900px;"></div>
 
                   </div>
 
