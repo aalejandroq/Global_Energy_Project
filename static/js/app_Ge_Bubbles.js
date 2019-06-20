@@ -132,9 +132,9 @@ console.log(data)
       type: 'log'
     },
     // angel - setting size of chart
-    autosize: true,
-    // width: 1400,
-    // height: 600,
+    autosize: false,
+    width: 1200,
+    height: 660,
     hovermode: 'closest',
 	 // We'll use updatemenus (whose functionality includes menus as
 	 // well as buttons) to create a play button and a pause button.
@@ -157,16 +157,16 @@ console.log(data)
         args: [null, {
           mode: 'immediate',
           fromcurrent: true,
-          transition: {duration: 500},
-          frame: {duration: 1000, redraw: false}
+          transition: {duration: 1000},
+          frame: {duration: 500, redraw: false}
         }],
         label: 'Play'
       }, {
         method: 'animate',
         args: [[null], {
           mode: 'immediate',
-          transition: {duration: 700},
-          frame: {duration: 700, redraw: false}
+          transition: {duration: 600},
+          frame: {duration: 600, redraw: false}
         }],
         label: 'Pause'
       }]
