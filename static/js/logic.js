@@ -117,7 +117,7 @@ function buildMap(countryData, param, pos, maxparam, unit,flag) {
     center: [
         10.5994, -7.6731
     ],
-    zoom: 2.5
+    zoom: 2.0
   })
   
   // Defining Listeners
@@ -201,7 +201,7 @@ function buildMap(countryData, param, pos, maxparam, unit,flag) {
 
   info.addTo(myMap);
 
-  var legend = L.control({ position: 'bottomright' });
+  var legend = L.control({ position: 'topleft' });
 
   legend.onAdd = function (map) {
 
