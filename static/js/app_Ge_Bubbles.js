@@ -165,8 +165,8 @@ console.log(data)
         method: 'animate',
         args: [[null], {
           mode: 'immediate',
-          transition: {duration: 800},
-          frame: {duration: 800, redraw: false}
+          transition: {duration: 700},
+          frame: {duration: 700, redraw: false}
         }],
         label: 'Pause'
       }]

@@ -76,8 +76,8 @@ function buildGauge(level, gauge, title) {
     }],
 
     title: `${title}`,
-    height: 430,
-    width: 430,
+    height: 350,
+    width: 350,
 
     margin: {'l':0 , 'r': 10, 't': 80, 'b': 0},
     
