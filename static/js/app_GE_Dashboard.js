@@ -6,7 +6,7 @@ function buildMetadata(country) {
     buildGauge(data.Total, "gauge", "<b>Consumed Energy</b>"),
       buildGauge(data.GDP, "gauge_1", "<b>GDP</b>"),
       buildGauge(data.Electricity, "gauge_2", "<b>Consumed Electricity</b>"),
-      buildGauge(data.Oil, "gauge_3", "<b>CO2 Emissions</b>");
+      buildGauge(data.CO2_emissions, "gauge_3", "<b>CO2 Emissions</b>");
   })
 }
 
