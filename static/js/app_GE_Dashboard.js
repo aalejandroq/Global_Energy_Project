@@ -2,40 +2,15 @@
 function buildMetadata(country) {
 
   d3.json(`/rank/${country}`).then(function (data) {
-    // console.log(data.Total)
-    // console.log(data.GDP)
-    // console.log(data.Electricity)
-    // console.log(data.Oil)
-    buildGauge(data.Total, "gauge", "<b>Total</b> <br> Scrubs per Week"),
-      buildGauge(data.GDP, "gauge_1", "GDP"),
-      buildGauge(data.Electricity, "gauge_2", "Electricity"),
-      buildGauge(data.CO2_emmissions, "gauge_3", "CO2_emissions");
+
+    buildGauge(data.Total, "gauge", "<b>Consumed Energy</b>"),
+      buildGauge(data.GDP, "gauge_1", "<b>GDP</b>"),
+      buildGauge(data.Electricity, "gauge_2", "<b>Consumed Electricity</b>"),
+      buildGauge(data.CO2_emmissions, "gauge_3", "<b>CO2 Emissions</b>");
   })
 }
 
-// MAKE THE PLOTS RESPONSIVE
-// (function () {
-//   var d3 = Plotly.d3;
-//   var WIDTH_IN_PERCENT_OF_PARENT = 110,
-//     HEIGHT_IN_PERCENT_OF_PARENT = 0;
 
-//   var gd3 = d3.selectAll(".responsive-plot")
-//     .style({
-//       width: WIDTH_IN_PERCENT_OF_PARENT + '%',
-//       'margin-left': (100 - WIDTH_IN_PERCENT_OF_PARENT) / 2 + '%',
-
-//       height: HEIGHT_IN_PERCENT_OF_PARENT + 'vh',
-//       'margin-bottom': (100 - HEIGHT_IN_PERCENT_OF_PARENT) / 2 + 'vh'
-//     });
-
-//   var nodes_to_resize = gd3[0]; //not sure why but the goods are within a nested array
-//   window.onresize = function () {
-//     for (var i = 0; i < nodes_to_resize.length; i++) {
-//       Plotly.Plots.resize(nodes_to_resize[i]);
-//     }
-//   };
-
-// })();
 
 
 
@@ -99,7 +74,7 @@ function buildGauge(level, gauge, title) {
         color: '850000'
       }
     }],
-    // title: '<b>Belly Button Washing Frequency</b> <br> Scrubs per Week',
+
     title: `${title}`,
     height: 430,
     width: 430,
@@ -163,9 +138,9 @@ function buildCharts(country, graph) {
 
 
       var layout = {
-        title: `${country} - Energy Consumption by Sector`,
+        title: `${country} - Fossil Fuel Consumption by Sector`,
         xaxis: { title: 'Year' },
-        yaxis: { title: 'Consumed Energy (UNITS PLEASE)' }
+        yaxis: { title: 'Consumed Energy (MTOE)' }
       };
 
       var all_traces = [trace1, trace2, trace3];
@@ -196,7 +171,7 @@ function buildCharts(country, graph) {
           var layout = {
             title: `${country} - Electricity Consumption`,
             xaxis: { title: 'Year' },
-            yaxis: { title: 'Consumed Energy (UNITS PLEASE)' }
+            yaxis: { title: 'Consumed Electricity (TWh)' }
           };
     
           var all_traces = [trace1, trace2];
@@ -279,7 +254,7 @@ function buildCharts(country, graph) {
       var layout = {
         title: `${country} - GDP by Economic Sector`,
         xaxis: { title: 'Year' },
-        yaxis: { title: 'GDP (UNITS PLEASE)' }
+        yaxis: { title: 'GDP (2005 price $)' }
       };
 
       var all_traces = [trace1, trace2, trace3, trace4, trace5, trace6, trace7];

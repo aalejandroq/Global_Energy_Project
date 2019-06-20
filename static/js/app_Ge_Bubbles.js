@@ -1,6 +1,4 @@
 
-// Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminderDataFiveYear.csv', function (err, data) {
-// Plotly.d3.csv('https://raw.githubusercontent.com/aalejandroq/cancer_test/master/db/dummydata.csv', function (err, data) {
 
 // MAKE THE PLOTS RESPONSIVE
 (function () {
@@ -17,7 +15,7 @@
           'margin-bottom': (100 - HEIGHT_IN_PERCENT_OF_PARENT) / 2 + 'vh'
       });
 
-  var nodes_to_resize = gd3[0]; //not sure why but the goods are within a nested array
+  var nodes_to_resize = gd3[0];
   window.onresize = function () {
       for (var i = 0; i < nodes_to_resize.length; i++) {
           Plotly.Plots.resize(nodes_to_resize[i]);
@@ -125,18 +123,18 @@ console.log(data)
 
   var layout = {
     xaxis: {
-      title: 'Energy Consumption',
+      title: 'Energy Consumption (MTOE)',
       range: [1, 3.7],
       type: 'log'
     },
     yaxis: {
-      title: 'GDP',
+      title: 'GDP (2005 price $)',
       type: 'log'
     },
     // angel - setting size of chart
-    autosize: true,
-    // width: 1200,
-    // height: 700,
+    autosize: false,
+    width: 1600,
+    height: 700,
     hovermode: 'closest',
 	 // We'll use updatemenus (whose functionality includes menus as
 	 // well as buttons) to create a play button and a pause button.
