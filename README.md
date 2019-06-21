@@ -1,4 +1,4 @@
-# Global_Energy_Project
+# Global Energy Project
 Hello hello hello check out the appp
 https://globalenergy.herokuapp.com/
 
