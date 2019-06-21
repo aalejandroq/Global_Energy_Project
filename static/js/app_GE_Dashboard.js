@@ -138,7 +138,7 @@ function buildCharts(country, graph) {
 
 
       var layout = {
-        title: `${country} - Fossil Fuel Consumption by Sector`,
+        title: `${country} - Fossil Fuel Consumption`,
         xaxis: { title: 'Year' },
         yaxis: { title: 'Consumed Energy (MTOE)' }
       };
@@ -177,6 +177,29 @@ function buildCharts(country, graph) {
           var all_traces = [trace1, trace2];
 
     }
+
+    else if (graph === "emissions") {
+    
+      var trace1 = {
+        x: data.year,
+        y: data.emissions,
+        name: 'CO2 Emissions',
+        fill: 'tonexty',
+        type: 'scatter',
+        mode: 'none',
+        stackgroup: 'one'
+      };
+
+ 
+      var layout = {
+        title: `${country} - CO2 Emissions`,
+        xaxis: { title: 'Year' },
+        yaxis: { title: 'CO2 Emissions (Mt)' }
+      };
+
+       var all_traces = [trace1];
+
+}
 
     else {
 
@@ -281,7 +304,7 @@ function init() {
 
     var selector1 = d3.select("#selDataset1");
 
-    graphNames = ["consumption", "electricity", "gdp"];
+    graphNames = ["consumption", "electricity", "emissions", "gdp"];
     graphNames.forEach((graph) => {
       selector1
         .append("option")

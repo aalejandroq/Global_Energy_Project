@@ -150,6 +150,18 @@ def electricity(country):
     }
     return jsonify(data)
 
+
+@app.route("/emissions/<country>")
+def emissions(country):
+
+
+    data = {
+        "year": total_consumption_df.Year.values.tolist(),
+        "emissions": emissions_df[country].values.tolist()
+    }
+    return jsonify(data)
+
+
 @app.route("/gdp/<country>")
 def gdp(country):
 
