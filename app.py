@@ -10,7 +10,7 @@ from flask import Flask, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import inspect
 
-# print (os.environ)
+#print (os.environ)
 if not os.environ.get('DYNO'):
     import config
     print(config.name)
