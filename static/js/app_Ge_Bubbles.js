@@ -132,9 +132,9 @@ console.log(data)
       type: 'log'
     },
     // angel - setting size of chart
-    autosize: false,
-    width: 1300,
-    height: 660,
+    autosize: true,
+    // width: 1300,
+    // height: 660,
     hovermode: 'closest',
 	 // We'll use updatemenus (whose functionality includes menus as
 	 // well as buttons) to create a play button and a pause button.
