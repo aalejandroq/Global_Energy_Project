@@ -86,7 +86,9 @@ console.log(data)
         size: data.marker.size.slice(),
         sizemode: 'area',
         sizeref: 2
-      }
+      },
+      // hoverinfo:data.marker.size.slice()
+      // hoverinfo:datum.emissions
     });
   }
 
