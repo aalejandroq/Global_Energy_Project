@@ -28,15 +28,35 @@
     <div class="horizontal-menu">
       <nav class="navbar top-navbar col-lg-12 col-12 p-0">
         <div class="container-fluid">
-          <div class="navbar-menu-wrapper d-flex">
-
+          <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between">
+            <!-- LogoSection -->
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
               <a class="navbar-brand brand-logo" href="https://globalenergy.herokuapp.com"><img
                   src="../static/images/Globe-Logo-lg.svg" alt="logo" /></a>
               <!-- <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg"
-                      alt="logo" /></a> -->
+                  alt="logo" /></a> -->
             </div>
-
+            <!-- Maps, Bubble Chart, & Dashboard -->
+            <ul class="nav page-navigation">
+              <li class="nav-item">
+                <a class="nav-link" href="/Maps">
+                  <i class="mdi mdi-map  icon-lg menu-icon"></i>
+                  <span class="menu-title">Map</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Charts">
+                  <i class="mdi mdi-chart-bubble icon-lg menu-icon"></i>
+                  <span class="menu-title">Bubble Chart</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Dashboard">
+                  <i class="mdi mdi-view-dashboard  icon-lg menu-icon"></i>
+                  <span class="menu-title">Dashboard</span>
+                </a>
+              </li>
+            </ul>
 
             <ul class="navbar-nav navbar-nav-right">
               <li class="nav-item dropdown  d-lg-flex d-none">
@@ -48,36 +68,10 @@
           </div>
         </div>
       </nav>
-
-      <nav class="bottom-navbar">
-        <div class="container">
-          <ul class="nav page-navigation">
-            <li class="nav-item">
-              <a class="nav-link" href="/Maps">
-                <i class="mdi mdi-map  icon-lg menu-icon"></i>
-                <span class="menu-title">Maps</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="/" class="nav-link">
-                <i class="mdi mdi-cube-outline icon-lg menu-icon"></i>
-                <span class="menu-title">Dashboard</span>
-                <i class="menu-arrow"></i>
-              </a>
-
-            <li class="nav-item">
-              <a href="/Charts" class="nav-link">
-                <i class="mdi mdi-finance icon-lg menu-icon"></i>
-                <span class="menu-title">Charts</span>
-                <i class="menu-arrow"></i>
-              </a>
-            </li>
-
-          </ul>
-        </div>
-      </nav>
     </div>
   </div>
+
+
 
   <!-- partial -->
   <div class="container-fluid page-body-wrapper">

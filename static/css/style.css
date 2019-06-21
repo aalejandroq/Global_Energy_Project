@@ -8903,7 +8903,7 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: #0d3586;
   text-decoration: none;
   background-color: transparent;
 }
@@ -18185,11 +18185,11 @@ a.text-secondary:hover, a.text-secondary:focus {
 }
 
 .text-success {
-  color: #0ddbb9 !important;
+  color: #44b747 !important;
 }
 
 a.text-success:hover, a.text-success:focus {
-  color: #09937c !important;
+  color: #44b747 !important;
 }
 
 .text-info {
@@ -21304,11 +21304,11 @@ dl li {
 }
 
 .nav-pills-success .nav-link {
-  color: #0ddbb9;
+  color: #44b747;
 }
 
 .nav-pills-success .nav-link.active {
-  background: #0ddbb9;
+  background: #44b747;
 }
 
 .nav-pills-info .nav-link {
@@ -22090,12 +22090,13 @@ dl li {
 }
 
 .horizontal-menu .top-navbar .navbar-brand-wrapper .navbar-brand {
-  color: #27367f;
+  color: #060f3f;
   font-size: 1.5rem;
   line-height: 48px;
   margin-right: 0;
   padding: .25rem 0;
   text-align: left;
+  font-family: "Material Design Icons";
 }
 
 .horizontal-menu .top-navbar .navbar-brand-wrapper .navbar-brand.brand-logo-mini {
@@ -22111,7 +22112,7 @@ dl li {
 }
 
 .horizontal-menu .top-navbar .navbar-brand-wrapper .navbar-brand:active, .horizontal-menu .top-navbar .navbar-brand-wrapper .navbar-brand:focus, .horizontal-menu .top-navbar .navbar-brand-wrapper .navbar-brand:hover {
-  color: #1b2658;
+  color: #182044;
 }
 
 .horizontal-menu .top-navbar .navbar-brand-wrapper .navbar-brand img {
@@ -22473,12 +22474,13 @@ dl li {
   }
 }
 
-.horizontal-menu .bottom-navbar .page-navigation {
+.horizontal-menu .top-navbar .page-navigation {
+  color: #08101b;
   position: relative;
   width: 100%;
   z-index: 99;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  -webkit-justify-content: space-evenly;
+  justify-content: center ;
   -webkit-transition-duration: 0.2s;
   -moz-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
@@ -22589,9 +22591,9 @@ dl li {
   .horizontal-menu .bottom-navbar .page-navigation > .nav-item:hover > .nav-link {
     background: transparent;
   }
-  .horizontal-menu .bottom-navbar .page-navigation > .nav-item:hover > .nav-link i,
-  .horizontal-menu .bottom-navbar .page-navigation > .nav-item:hover > .nav-link .menu-title {
-    color: #464dee;
+  .horizontal-menu .top-navbar .page-navigation > .nav-item:hover > .nav-link i,
+  .horizontal-menu .top-navbar .page-navigation > .nav-item:hover > .nav-link .menu-title {
+    color: #44b747;
     transition: color 1s ease;
   }
   .horizontal-menu .bottom-navbar .page-navigation > .nav-item:hover > .nav-link .menu-arrow {
@@ -22737,7 +22739,7 @@ dl li {
 }
 
 .horizontal-menu .bottom-navbar .page-navigation > .nav-item .submenu ul li a:hover:before {
-  background: #464dee;
+  background: #080925;
 }
 
 .horizontal-menu .bottom-navbar .page-navigation > .nav-item .submenu ul li a.active {
@@ -22745,7 +22747,7 @@ dl li {
 }
 
 .horizontal-menu .bottom-navbar .page-navigation > .nav-item .submenu ul li.active a {
-  color: #464dee;
+  color: #0c0f4e;
 }
 
 .horizontal-menu .bottom-navbar .page-navigation > .nav-item .submenu ul li.active a:before {
