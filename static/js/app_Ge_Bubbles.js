@@ -52,6 +52,7 @@ console.log(data)
   for (var i = 0; i < data.length; i++) {
     var datum = data[i];
     var trace = getData(datum.year, datum.continent);
+    // var trace = getData(datum.year, datum.emissions);
     trace.text.push(datum.country);
     trace.id.push(datum.country);
     trace.x.push(datum.consumption);
@@ -81,6 +82,7 @@ console.log(data)
       y: data.y.slice(),
       id: data.id.slice(),
       text: data.text.slice(),
+      // text: data.marker.size.slice(),
       mode: 'markers',
       marker: {
         size: data.marker.size.slice(),
