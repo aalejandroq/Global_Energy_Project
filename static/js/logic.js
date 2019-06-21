@@ -14,10 +14,10 @@ var geojson;
 
 function getColor(d,maxparam){ 
   var color = d3.scaleLinear()
-    .domain([0, maxparam/64 , maxparam/32,maxparam/16, maxparam/8,maxparam/4,maxparam/2,maxparam])
-    .range(["lightgray", '#FED976', '#FEB24C','#FD8D3C','#FC4E2A','#E31A1C','#BD0026','#800026']);
-    // .domain([0, maxparam/(1.2^7), maxparam/(1.2^6) , maxparam/(1.2^5), maxparam/(1.2^4), maxparam/(1.2^3),maxparam/(1.2^2),maxparam/(1.2),maxparam])
-    // .range(["lightgray", "#b2182b",'#FED976', '#FEB24C','#FD8D3C','#FC4E2A','#E31A1C','#BD0026','#800026']);
+    // .domain([0, maxparam/64 , maxparam/32,maxparam/16, maxparam/8,maxparam/4,maxparam/2,maxparam])
+    // .range(["lightgray", '#FED976', '#FEB24C','#FD8D3C','#FC4E2A','#E31A1C','#BD0026','#800026']);
+    .domain([0, maxparam/(1.2^7), maxparam/(1.2^6) , maxparam/(1.2^5), maxparam/(1.2^4), maxparam/(1.2^3),maxparam/(1.2^2),maxparam/(1.2),maxparam])
+    .range(["lightgray", "#b2182b",'#FED976', '#FEB24C','#FD8D3C','#FC4E2A','#E31A1C','#BD0026','#800026']);
     // .range([["#b2182b", "#d6604d", "#f4a582", "#fddbc7", "#d1e5f0", "#92c5de", "#4393c3", "#2166ac"]])
   return color(d)
 }
