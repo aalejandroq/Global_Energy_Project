@@ -82,15 +82,19 @@ console.log(data)
       y: data.y.slice(),
       id: data.id.slice(),
       text: data.text.slice(),
-      // text: data.marker.size.slice(),
       mode: 'markers',
       marker: {
         size: data.marker.size.slice(),
         sizemode: 'area',
         sizeref: 2
       },
-      // hoverinfo:data.marker.size.slice()
-      // hoverinfo:datum.emissions
+      hovertemplate:
+      "<b>%{text}</b><br><br>" +
+      "%{yaxis.title.text}: %{y:$,.0f}<br>" +
+      "%{xaxis.title.text}: %{x:.0f}<br>" +
+      "CO2 Emissions (Mt): %{marker.size:,.0f}" +
+      "<extra></extra>"
+      
     });
   }
 
