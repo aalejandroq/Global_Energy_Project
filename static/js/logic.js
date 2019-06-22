@@ -46,7 +46,7 @@ function init() {
 
     var selector1 = d3.select("#selDataset1");
 
-    graphNames = ["Total Enerergy Consumption", "gdp", "emissions"];
+    graphNames = ["Total Energy Consumption", "gdp", "emissions"];
     graphNames.forEach((graph) => {
       selector1
         .append("option")
