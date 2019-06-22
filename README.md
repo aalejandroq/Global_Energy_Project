@@ -1,5 +1,5 @@
 # Global Energy Project
-Hello hello hello check out the appp
+In this project we have created a dashboard to visualize the relationship between energy consuption, electricity consumption, CO2 emissions and GDP for a set of countries.
 https://globalenergy.herokuapp.com/
 
 # Data
