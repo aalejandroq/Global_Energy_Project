@@ -16,7 +16,7 @@ function getColor(d,maxparam){
   var color = d3.scaleLinear()
     // .domain([0, maxparam/64 , maxparam/32,maxparam/16, maxparam/8,maxparam/4,maxparam/2,maxparam])
     // .range(["lightgray", '#FED976', '#FEB24C','#FD8D3C','#FC4E2A','#E31A1C','#BD0026','#800026']);
-    .domain([0, maxparam/(1.4^7), maxparam/(1.4^6) , maxparam/(1.4^5), maxparam/(1.4^4), maxparam/(1.4^3),maxparam/(1.4^2),maxparam/(1.4),maxparam])
+    .domain([0, maxparam/(1.5^7), maxparam/(1.5^6) , maxparam/(1.5^5), maxparam/(1.5^4), maxparam/(1.5^3),maxparam/(1.5^2),maxparam/(1.5),maxparam])
     .range(["white", "#b2182b",'#FED976', '#FEB24C','#FD8D3C','#FC4E2A','#E31A1C','#BD0026','#800026']);
     // .range([["#b2182b", "#d6604d", "#f4a582", "#fddbc7", "#d1e5f0", "#92c5de", "#4393c3", "#2166ac"]])
   return color(d)
@@ -61,7 +61,7 @@ function init() {
     var param = "TotEnerCon"
     var maxparam = 3200;
     var unit = "Million Tonnes of Oil Equivalent"
-    var pos = parseInt(2017)-parseInt(1990)
+    var pos = parseInt(1990)-parseInt(1990)
     
     // console.log(pos)
     // console.log(param)
