@@ -76,7 +76,7 @@ init();
 
 function optionChanged(newYear,newGraph) {
   switch (newGraph) {
-    case "Total Enerergy Consumption":
+    case "Total Energy Consumption":
       var param = "TotEnerCon"      
       var maxparam = 3200;
       var unit = "Million Tonnes of Oil Equivalent";
