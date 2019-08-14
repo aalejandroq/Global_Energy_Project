@@ -3,6 +3,11 @@ In this project we have created a dashboard to visualize the relationship betwee
 
 https://globalenergy.herokuapp.com/
 
+# Contributors
+### Wilson Aliaga https://github.com/jwaliaga
+### Velma Vazquez https://github.com/velmavasquez
+### Angel Alejandro https://github.com/aalejandroq
+
 # Data
 ### Global Energy Statistical Yearbook
 This data set is provided by Enerdata, an independent information & consulting firm specialising in the global energy and carbon markets.
